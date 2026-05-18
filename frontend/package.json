@@ -1,0 +1,23 @@
+{
+  "name": "ruleengine-v2-frontend",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "start": "vite --host 0.0.0.0 --port 5173",
+    "restart": "npm run dev",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "typescript": "^5.8.2",
+    "vite": "^6.0.7"
+  }
+}

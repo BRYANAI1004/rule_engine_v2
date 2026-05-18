@@ -1,0 +1,73 @@
+{
+  "mcg_code": "M083",
+  "mc_title": "Stroke: Ischemic",
+  "source_tree": "rules/mcg/source-trees/M083.source-tree.v1.json",
+  "domain_node_count": 9,
+  "logic_node_count": 119,
+  "source_ref_count": 113,
+  "condition_dictionary_count": 119,
+  "source_tree_audit": {
+    "source_node_count": 360,
+    "section_count": 20,
+    "table_count": 1,
+    "footnote_count": 16,
+    "reference_count": 88,
+    "code_group_count": 1,
+    "node_count_by_domain": {
+      "admission": 182,
+      "supplemental_medicare": 5,
+      "alternatives": 6,
+      "extended_stay": 63,
+      "discharge": 91,
+      "evidence_summary": 13
+    },
+    "node_count_by_section": {
+      "M083.section.admission": 182,
+      "M083.section.supplemental_medicare": 5,
+      "M083.section.alternatives": 6,
+      "M083.section.extended_stay": 63,
+      "M083.section.discharge_planning": 86,
+      "M083.section.discharge_destination": 5,
+      "M083.section.evidence_criteria": 4,
+      "M083.section.evidence_alternatives_ann": 1,
+      "M083.section.evidence_hospitalization_ann": 1,
+      "M083.section.evidence_length_of_stay": 1,
+      "M083.section.evidence_rationale": 2,
+      "M083.section.related_cms": 4
+    },
+    "admission": {
+      "found": true,
+      "root_found": true,
+      "root_logic_hint": "OR",
+      "expected_path_texts_found": {
+        "admission_root": true,
+        "stroke_neuro_following": true,
+        "nihss": true,
+        "hemorrhagic_transformation": true,
+        "altered_ms": true,
+        "stroke_monitoring_following": true,
+        "hemodynamic": true,
+        "thrombolysis": true
+      }
+    },
+    "discharge": {
+      "found": true,
+      "planning_found": true,
+      "destination_found": true,
+      "patient_safe_to_go_home_found": true,
+      "medication_reconciliation_found": true
+    },
+    "orc_table_found": true,
+    "nodes_missing_original_text": [],
+    "nodes_missing_source_id": [],
+    "duplicate_source_node_ids": [],
+    "ui_noise_detected": [],
+    "residual_expand_text": [],
+    "warnings": []
+  },
+  "logic": {
+    "bad_condition_keys": [],
+    "example_nodes_with_strict_boolean_true": [],
+    "synthetic_original_text_nodes": []
+  }
+}

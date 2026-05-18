@@ -1,0 +1,18 @@
+{
+  "name": "ruleengine-v2",
+  "version": "0.0.1",
+  "private": true,
+  "description": "MCG source ingestion pipeline (skeleton)",
+  "type": "module",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "typecheck": "npm run typecheck --prefix backend && npm run typecheck --prefix frontend",
+    "backend": "npm restart --prefix backend",
+    "frontend": "npm restart --prefix frontend",
+    "smoke": "npm run smoke --prefix backend",
+    "capture:mcg": "python tools/capture/capture_mcg.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
