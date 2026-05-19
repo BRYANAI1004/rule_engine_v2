@@ -1,0 +1,560 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>M085 Stroke: Hemorrhagic - Integrated Admission &amp; Discharge Rule Hierarchy</title>
+<style>
+@page {
+  size: A4 landscape;
+  margin: 8mm 7mm 9mm 7mm;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+  font-size: 9px;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  border-bottom: 2px solid #222;
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 15px;
+  margin: 12px 0 6px 0;
+  color: #0b3d69;
+}
+.subtitle {
+  font-size: 10px;
+  color: #555;
+}
+.main-admission {
+  font-size: 13px;
+  background: #eaf2fb;
+  border-left: 5px solid #1f5f99;
+  padding: 7px 9px;
+  margin-bottom: 8px;
+}
+.main-discharge {
+  font-size: 13px;
+  background: #f4fbea;
+  border-left: 5px solid #3d7316;
+  padding: 7px 9px;
+  margin-bottom: 8px;
+}
+ul {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 18px;
+}
+li {
+  margin: 2px 0;
+}
+.path-block {
+  page-break-inside: avoid;
+  margin: 8px 0 10px 0;
+  padding: 7px;
+  border: 1px solid #c9d6e2;
+  border-radius: 5px;
+}
+.path-title {
+  font-size: 12px;
+  color: #0b3d69;
+  background: #eef5ff;
+  padding: 5px 7px;
+  border-left: 4px solid #1f5f99;
+  margin-bottom: 5px;
+}
+.node-line {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  white-space: pre-wrap;
+}
+.domain-node.linked > .node-line {
+  font-weight: 700;
+  color: #083b63;
+}
+.domain-node.linked-atomic > .node-line {
+  font-weight: 700;
+  color: #083b63;
+}
+.atomic-meta {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 8px;
+  color: #333;
+  margin: 2px 0;
+}
+.atomic-foot {
+  font-size: 7px;
+  color: #666;
+  margin-top: 2px;
+}
+.definition-appendix {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+.admission-root {
+  margin-top: 14px;
+}
+h1.def-root {
+  font-size: 16px;
+  margin: 6px 0 4px 0;
+}
+h2.def-section {
+  font-size: 12px;
+  margin: 10px 0 4px 0;
+  color: #0b3d69;
+}
+.definition-appendix ul.def-key-list {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.definition-appendix ul.def-key-list li {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 9px;
+}
+.definition-appendix .def-none {
+  color: #777;
+  font-size: 9px;
+  margin: 2px 0 6px 0;
+}
+.unlinked-note {
+  color: #777;
+  font-size: 8px;
+  margin: 2px 0 4px 0;
+}
+.shared-box {
+  margin: 4px 0 5px 0;
+  padding: 6px 7px;
+  border-left: 4px solid #6b3fa0;
+  background: #f7f3fb;
+}
+.shared-title {
+  font-weight: 700;
+  color: #4b217d;
+}
+.source-title {
+  color: #555;
+  font-size: 8px;
+  margin-bottom: 4px;
+}
+.op {
+  font-weight: 800;
+  color: #5b2aa0;
+}
+.condition-key {
+  font-weight: 700;
+  color: #123f5d;
+}
+.atom-label {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 700;
+}
+.orig {
+  color: #555;
+  font-size: 8px;
+  margin-left: 2px;
+}
+.review {
+  color: #9a5b00;
+  font-weight: 700;
+}
+.missing, .cycle {
+  color: #b00020;
+}
+</style>
+</head>
+<body>
+<section class='top'>
+<h1>M085 Stroke: Hemorrhagic - Integrated Admission &amp; Discharge Rule Hierarchy</h1>
+<div class='subtitle'>Admission Discharge. Domain Level‑3 paths are shown with linked definitions embedded under each rule.</div>
+</section>
+<section class='definition-appendix'>
+<h1 class='def-root'>Definition</h1>
+<h2 class='def-section'>Composite Definitions</h2>
+<ul class='def-key-list'>
+<li>altered_mental_status_condition_present</li>
+<li>cardiac_arrhythmia_of_immediate_concern_condition_present</li>
+<li>dangerous_arrhythmia_condition_present</li>
+<li>hemodynamic_instability_condition_present</li>
+<li>hypotension_condition_present</li>
+<li>hypoxemia_condition_present</li>
+<li>orthostatic_hypotension_condition_present</li>
+<li>prolonged_cardiac_telemetry_monitoring_required</li>
+<li>respiratory_abnormality_condition_present</li>
+<li>tachycardia_condition_present</li>
+</ul>
+<h2 class='def-section'>Atomic Numeric Definitions</h2>
+<ul class='def-key-list'>
+<li>arterial_or_venous_ph</li>
+<li>arterial_po2_mmhg</li>
+<li>lactate_mmol_l</li>
+<li>mean_arterial_pressure_mmhg</li>
+<li>orthostatic_diastolic_blood_pressure_drop_mmhg</li>
+<li>orthostatic_systolic_blood_pressure_drop_mmhg</li>
+<li>shock_index</li>
+<li>spo2_percent</li>
+</ul>
+<h2 class='def-section'>Atomic Boolean / Leaf Definitions</h2>
+<ul class='def-key-list'>
+<li>acute_myocarditis_condition_present</li>
+<li>automatic_icd_firing_malfunction_or_setting_adjustment_needed_condition_present</li>
+<li>baseline_sbp_decrease_with_symptoms_condition_present</li>
+<li>coma_condition_present</li>
+<li>confusional_state_condition_present</li>
+<li>continuous_long_term_ecg_monitoring_needed_condition_present</li>
+<li>dangerous_arrhythmia_associated_significant_symptoms_condition_present</li>
+<li>end_organ_dysfunction_due_to_hypotension_condition_present</li>
+<li>hypotension_in_dangerous_arrhythmia_context_condition_present</li>
+<li>increased_supplemental_oxygen_from_baseline_condition_present</li>
+<li>leaf_m085_d0b259eee49b8ebe</li>
+<li>lethargy_condition_present</li>
+<li>myocardial_ischemia_condition_present</li>
+<li>new_onset_lbbb_with_suspected_myocardial_ischemia_condition_present</li>
+<li>nonsustained_ventricular_tachycardia_condition_present</li>
+<li>obtundation_condition_present</li>
+<li>persistence_despite_appropriate_treatment_context_present</li>
+<li>prolonged_telemetry_beyond_observation_required</li>
+<li>respiratory_distress_in_dangerous_arrhythmia_context_condition_present</li>
+<li>resuscitated_ventricular_fibrillation_or_cardiac_arrest_condition_present</li>
+<li>stupor_condition_present</li>
+<li>supplemental_oxygen_required_to_maintain_targets_condition_present</li>
+<li>suspected_cardiac_ischemia_as_cause_or_consequence_of_vt_condition_present</li>
+<li>sustained_ventricular_tachycardia_condition_present</li>
+<li>third_degree_av_block_condition_present</li>
+<li>type_ii_second_degree_av_block_condition_present</li>
+<li>vasopressor_or_inotrope_required</li>
+<li>ventricular_escape_rhythm_condition_present</li>
+</ul>
+<h2 class='def-section'>Needs Review / Pediatric Placeholders</h2>
+<ul class='def-key-list'>
+<li>atrial_fibrillation_detection_only_context_absent</li>
+<li>clinically_active_atrial_fibrillation_condition_present</li>
+<li>heart_rate_bpm</li>
+<li>impaired_airway_protection_condition_present</li>
+<li>pediatric_hypoperfusion_due_to_hypotension_condition_present</li>
+<li>pediatric_shock_index_threshold_condition_present</li>
+<li>pediatric_systolic_blood_pressure_threshold_condition_present</li>
+<li>pediatric_vasopressor_or_inotrope_required</li>
+<li>systolic_blood_pressure_mmhg</li>
+</ul>
+</section>
+<section class='rule-root'>
+<h2>M085 — Admission</h2>
+<div class='main-admission'><b>Admission is indicated for 1 or more of the following</b></div>
+<ul class='path-list'>
+<li class='path-block'>
+<div class='path-title'><b>Path 1: Acute hemorrhagic (eg, intracerebral) stroke ) ) )</b></div>
+<ul class='domain-tree'>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_d0b259eee49b8ebe] Acute hemorrhagic (eg, intracerebral) stroke ( 1 ) ( 3 ) ( 6 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: leaf_m085_d0b259eee49b8ebe -> atom.M085.admission.leaf_m085_d0b259eee49b8ebe</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Acute hemorrhagic (eg, intracerebral) stroke ( 1 ) ( 3 ) ( 6 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<hr style='margin:16px 0;' />
+<h2>M085 — Discharge</h2>
+<div class='main-discharge'><b>Discharge domain (planning + destination checklist items)</b></div>
+<ul class='path-list'>
+<li class='path-block'>
+<div class='path-title'><b>Section 1: Discharge planning includes</b></div>
+<ul class='domain-tree'>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Discharge planning includes [ H ] :</div>
+<ul>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Assessment of needs and planning for care, including ( 34 ) ( 35 ):</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_ab977bcffa8bc889] Develop and modify treatment plan (involving multiple providers) as needed.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_dfba81134c77cfcb] Evaluate and address preadmission functioning as needed.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_50f276c428eab382] Evaluate and address psychosocial status issues as indicated. See Psychosocial Assessment SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_65a3038df710a877] Evaluate and address social determinants of health (eg, housing, food). See Social Determinants of Health Screening Tool SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_0da618771df6e57e] Evaluate and address patient or caregiver preferences as indicated.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Identify skilled services needed at next level of care, with specific attention to:</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_66220665affbbd3d] Home safety assessment ( 36 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_3654d6b4c79153aa] Medication management, adherence instruction, and side effects assessment ( 37 ) ( 38 ) ( 39 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_f84737e44e98c16e] Nutrition and hydration management ( 40 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_a740de8c171a5494] Ongoing education required ( 41 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_ad06c5eefd7a67d6] Rehabilitation therapy or equipment coordination ( 42 ) ( 43 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OPTIONS] Early identification of anticipated discharge destination; options include ( 35 ) ( 44 ):</div>
+<ul>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Home; considerations include:</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_f3f01501badfb535] Home safety assessment. See Home Safety Assessment SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / EXAMPLE_SET] Patient safe to go home; examples include ( 45 ) ( 46 ) ( 47 ):</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_4f99a6f92c95b3a6] Medical status stable for patient&#x27;s condition</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_def5d5e2d5ece6af] Functional care can safely be provided with available resources.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_33baa0b2aac1dd45] Mental status stable for patient&#x27;s condition</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_0edef70e02775dd2] Medication availability confirmed and reconciliation complete</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_6e817f3c7960d084] Patient/caregiver education completed with written discharge instructions provided</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_d6286979b5631777] Community resources identified and referrals made, as needed</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_ea472f9fdef01626] Home care arranged, if indicated</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_dcdd869ff34c827e] Necessary medical equipment delivery arranged or available in home, if indicated</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_9afdb64b8d51bc8a] Necessary medical supplies ordered, or patient/caregiver can obtain, if indicated</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_b3dac8babe90afed] Access to follow-up care</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_f5a8614776038c1b] Self-management ability if appropriate. See Activities of Daily Living (ADL) and Instrumental Activities of Daily Living (IADL) Assessment SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_2fc4985c0906a20b] Caregiver need, ability, and availability</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_8d4f6c1c6500ed37] Post-acute skilled care or custodial care as indicated. See Discharge Planning Tool SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Transitions of care plan complete, including ( 35 ) ( 44 ) ( 48 ):</div>
+<ul>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Patient and caregiver education complete.</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_f99b6ea3f2552fab] See Teach-Back Tool SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_9b4a8e3f70719a20] See Stroke: Hemorrhagic: Patient Education for Clinicians SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Medication reconciliation completion includes ( 39 ) ( 49 ):</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_c59489e5a565aef5] Compare patient&#x27;s discharge list of medications (prescribed and over-the-counter) against provider&#x27;s admission or transfer orders.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_21b2214af7f1a125] Assess each medication for correlation to disease state or medical condition.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_1637667dcd64a667] Report medication discrepancies to prescribing provider, attending physician, and primary care provider, and ensure accurate medication order is identified.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_e1c7ca08d2f5b688] Provide reconciled medication list to all treating providers.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_bbc14450f7546551] Confirm that patient or caregiver can acquire medication.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Educate patient and caregiver.</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_3b3d82c2e2652f38] Provide complete medication list to patient and caregiver.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_b46c48feaef1d266] Importance of presenting personal medication list to all providers at each care transition, including all provider appointments</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_bc8384dd13f9f6b3] Reason, dosage, and timing of medication (eg, use &quot;teach-back&quot; techniques) ( 50 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_dc28bf5eb8b148cd] Encourage communication between patient, caregiver, and pharmacy for obtaining prescriptions, setting up home medication delivery, and reviewing for drug-drug interactions.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_549305994b2748ce] See Medication Reconciliation Tool SR for further information.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / CHECKLIST] Plan communicated to patient, caregiver, and all members of care team, including ( 51 ):</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_37d1c6ad23e9c9b9] Inpatient care and service providers</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_6008cc804b52949c] Primary care provider</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_261da3b0241d72ea] All post-discharge care and service providers</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OPTIONS] Appointments planned or scheduled, which may include:</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_7a472c02eac606c2] Primary care provider ( 52 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_1a8ab92fbd586233] Follow-up evaluation call. See Post-Acute Care Follow-Up Call Tool SR for further information. ( 41 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_e2273898e2ff7834] Neurologist ( 53 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_581adaafd85fb359] Neurosurgeon ( 3 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_9b9139ca92ec37bb] Physiatrist or rehabilitation physician ( 53 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_6e473abd8794059a] Rehabilitation therapy services ( 43 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_a6b51443141a8a44] Other</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OPTIONS] Outpatient testing and procedure plans made, which may include:</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_5fa763e4bb5f8423] Nuclear medicine ( 54 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_b6179bd1c40646c2] Other</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OPTIONS] Referrals made for assistance or support, which may include:</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_3e7a515aef3e6f16] Alcohol and other drug abuse or dependence treatment</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_9f8de695d4b01cf6] Community services</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_37a8344aa2b6b29a] Educational program (eg, chronic condition management, self-management) ( 52 ) ( 55 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_f3723626b286b8ec] End-stage disease planning ( 3 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_4bf0f60c04162936] Financial, for follow-up care, medication, and transportation</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_55619fc7b93adb34] Home architectural modifications</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_c8c179ad1048892c] Self-help or support groups ( 56 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_181321521a5e1ba0] Social services (eg, social programs, advance directives) ( 53 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_a32ec71ea6b90ed9] Tobacco use treatment ( 57 ) ( 58 ) ( 59 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_dda5c816be374342] Vocational rehabilitation ( 43 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_9820a2f57aa0d85b] Other</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OPTIONS] Medical equipment and supplies coordinated (ie, delivered or delivery confirmed), which may include ( 60 ):</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_da611fe478bfb673] Adaptive devices (eg, feeding tools, reachers)</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_a028480ee6691bc6] Ambulation devices (eg, cane, crutches, walker)</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_c8eeff311b0f0b20] Antiembolic or compression stockings</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_297d13221d262a2f] Bath and toilet aids</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_aa907369b7c59054] Blood pressure cuff</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_8540c8fc77faf1ed] Chair lift</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_8288fd5f9e624f6d] Lift equipment</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_dd1b77c8b7701b6e] Pressure injury prevention equipment ( 53 )</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_a3f5cf4e8f102893] Wheelchairs and accessories</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_f5d089daa1548102] Other</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='path-block'>
+<div class='path-title'><b>Section 2: Discharge Destination</b></div>
+<ul class='domain-tree'>
+<li class='domain-node'><div class='node-line'>[composite / OPTIONS] Post-hospital levels of admission may include:</div>
+<ul>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_00b943bdccb26fd1] Home.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_809acb478dc36f9c] Home healthcare. See Home Care Indications for Admission Section HC in Stroke guideline in Home Care.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_b6b8a8d0ad8fbe78] Recovery facility care. See Recovery Facility Care Indications for Admission Section RFC in Stroke guideline in Recovery Facility Care.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+<li class='domain-node unlinked'><div class='node-line'>[atomic / IS_TRUE / leaf_m085_7f99a20a264e0b82] Inpatient rehabilitation facility. See Inpatient Rehabilitation Facility (Acute Rehabilitation) Indications for Admission Section RFC in Inpatient Rehabilitation Facility (Acute Rehabilitation): Stroke guideline in Recovery Facility Care.</div>
+<div class='unlinked-note'>No shared definition linked yet - treated as current direct leaf / extractor target.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</body>
+</html>

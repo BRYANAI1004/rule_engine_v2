@@ -8,7 +8,7 @@ This repository implements an **MCG (Medical Coverage Guidelines) source ingesti
 - `backend/` — APIs and future source-ingestion services (minimal Express + existing TypeScript helpers)
 - `tools/capture/` — Python Playwright capture scripts
 - `tools/parse/` — Python HTML → `mcg_source_tree.v1` (Step 2A)
-- `rules/mcg/` — local artifact directories (`raw-html`, `source-trees`, `domain-trees`, `audits`)
+- `rules/mcg/` — local artifact directories (`raw-html`, `source-trees`, `domain-trees`, `shared-condition-definitions`, `linked-rule-trees`, `audits`)
 - `supabase/` — database migrations
 - `docs/` — architecture and notes
 
@@ -61,6 +61,96 @@ python tools/parse/validate_domain_rule_tree.py \
 ```
 
 Artifacts under `rules/mcg/domain-trees/` mirror Step 2A layout: main `*.v1.json`, JSONL shards, `*.audit.json`, and `*.roundtrip.md`.
+
+## Step 2D — shared condition definitions (from definition popup captures)
+
+After **Step 1A/1B definition capture**, convert selected `mcg_popup_capture.v2` definition popups into `mcg_shared_condition_definitions.v1` JSON (deterministic, targeted parser; no LLM; no Supabase; no rule-engine evaluation).
+
+```bash
+source .venv/bin/activate
+
+python tools/parse/build_mcg_definition_rule_tree.py \
+  --mcg-code M083 \
+  --title "Stroke: Ischemic" \
+  --definitions-json rules/mcg/raw-html/M083.definitions.raw.json \
+  --domain-rule-tree rules/mcg/domain-trees/M083.domain-rule-tree.v1.json \
+  --out-dir rules/mcg/shared-condition-definitions
+
+python tools/parse/validate_mcg_definition_rule_tree.py \
+  --input rules/mcg/shared-condition-definitions/M083.shared-condition-definitions.v1.json
+```
+
+Artifacts under `rules/mcg/shared-condition-definitions/` include the main JSON, JSONL shards, `*.audit.json`, and `*.roundtrip.md`.
+
+DuckDB examples:
+
+```bash
+duckdb -c "
+select condition_key, display_name, root_composite_id
+from read_ndjson_auto('rules/mcg/shared-condition-definitions/M083.shared-condition-definitions.conditions.jsonl');
+"
+
+duckdb -c "
+select id, condition_key, measurement, operator, value, unit, original_text
+from read_ndjson_auto('rules/mcg/shared-condition-definitions/M083.shared-condition-definitions.atomic-rules.jsonl')
+where condition_key in (
+  'systolic_blood_pressure_mmhg','shock_index','mean_arterial_pressure_mmhg',
+  'lactate_mmol_l','arterial_or_venous_ph'
+);
+"
+```
+
+## Step 2E — linked rule tree (domain logic ↔ shared definitions)
+
+Project the **domain rule tree** onto **shared condition definitions**: each Level 4 logic node keeps its original fields plus `definition_link_status` (`linked_shared_definition`, `unlinked`, or `not_applicable`). This is a read-only linkage artifact (it does not replace the domain tree).
+
+```bash
+source .venv/bin/activate
+PYTHONPYCACHEPREFIX="$(pwd)/.pyc_tmp" python3 -m py_compile tools/parse/*.py
+rm -rf .pyc_tmp
+
+python tools/parse/build_mcg_linked_rule_tree.py \
+  --mcg-code M083 \
+  --domain-rule-tree rules/mcg/domain-trees/M083.domain-rule-tree.v1.json \
+  --shared-definitions rules/mcg/shared-condition-definitions/M083.shared-condition-definitions.v1.json \
+  --out-dir rules/mcg/linked-rule-trees
+
+python tools/parse/validate_mcg_linked_rule_tree.py \
+  --input rules/mcg/linked-rule-trees/M083.linked-rule-tree.v1.json \
+  --shared-definitions rules/mcg/shared-condition-definitions/M083.shared-condition-definitions.v1.json
+```
+
+Artifacts under `rules/mcg/linked-rule-trees/` include `*.v1.json`, `*.linked-logic-nodes.jsonl`, `*.linked-condition-refs.jsonl`, `*.audit.json`, and `*.roundtrip.md`.
+
+DuckDB examples:
+
+```bash
+duckdb -c "
+select
+  condition_key,
+  definition_link_status,
+  root_composite_id,
+  domain_original_text
+from read_ndjson_auto('rules/mcg/linked-rule-trees/M083.linked-condition-refs.jsonl')
+where condition_key = 'hemodynamic_instability_condition_present';
+"
+```
+
+### Export integrated admission hierarchy (PDF)
+
+From a domain rule tree, shared definitions, and linked condition refs, emit the same styled HTML/PDF used for admission path review (`tools/export/export_mcg_integrated_admission_pdf.py` wraps Playwright/Chromium):
+
+```bash
+python tools/export/export_mcg_integrated_admission_pdf.py \
+  --mcg-code M083 \
+  --mcg-title "Stroke: Ischemic" \
+  --domain-rule-tree rules/mcg/domain-trees/M083.domain-rule-tree.v1.json \
+  --shared-definitions rules/mcg/shared-condition-definitions/M083.shared-condition-definitions.v1.json \
+  --linked-condition-refs rules/mcg/linked-rule-trees/M083.linked-condition-refs.jsonl \
+  --output rules/mcg/previews/M083.integrated-rule-hierarchy.pdf
+```
+
+The legacy shim `tools/export/export_m083_integrated_admission_pdf.py` keeps the prior CLI (`--domain-rule-tree`, `--shared-definitions`, `--linked-condition-refs`, `--output`, optional `--title`) and forwards to the generic exporter with M083 code/title.
 
 ## Licensed raw HTML
 

@@ -1,0 +1,72 @@
+{
+  "mcg_code": "M190",
+  "mc_title": "Heart Failure",
+  "source_tree": "/Users/alt./Desktop/rule_engine_v2/rules/mcg/source-trees/M190.source-tree.v1.json",
+  "domain_node_count": 19,
+  "logic_node_count": 98,
+  "source_ref_count": 99,
+  "condition_dictionary_count": 98,
+  "source_tree_audit": {
+    "source_node_count": 328,
+    "section_count": 19,
+    "table_count": 1,
+    "footnote_count": 13,
+    "reference_count": 79,
+    "code_group_count": 1,
+    "node_count_by_domain": {
+      "admission": 163,
+      "supplemental_medicare": 5,
+      "alternatives": 12,
+      "extended_stay": 52,
+      "discharge": 83,
+      "evidence_summary": 13
+    },
+    "node_count_by_section": {
+      "M190.section.admission": 163,
+      "M190.section.supplemental_medicare": 5,
+      "M190.section.alternatives": 12,
+      "M190.section.extended_stay": 52,
+      "M190.section.discharge_planning": 78,
+      "M190.section.discharge_destination": 5,
+      "M190.section.evidence_criteria": 3,
+      "M190.section.evidence_hospitalization_ann": 3,
+      "M190.section.evidence_length_of_stay": 1,
+      "M190.section.evidence_rationale": 2,
+      "M190.section.related_cms": 4
+    },
+    "admission": {
+      "found": true,
+      "root_found": true,
+      "root_logic_hint": "OR",
+      "expected_path_texts_found": {
+        "admission_root": true,
+        "stroke_neuro_following": false,
+        "nihss": false,
+        "hemorrhagic_transformation": false,
+        "altered_ms": true,
+        "stroke_monitoring_following": false,
+        "hemodynamic": true,
+        "thrombolysis": false
+      }
+    },
+    "discharge": {
+      "found": true,
+      "planning_found": true,
+      "destination_found": true,
+      "patient_safe_to_go_home_found": true,
+      "medication_reconciliation_found": true
+    },
+    "orc_table_found": true,
+    "nodes_missing_original_text": [],
+    "nodes_missing_source_id": [],
+    "duplicate_source_node_ids": [],
+    "ui_noise_detected": [],
+    "residual_expand_text": [],
+    "warnings": []
+  },
+  "logic": {
+    "bad_condition_keys": [],
+    "example_nodes_with_strict_boolean_true": [],
+    "synthetic_original_text_nodes": []
+  }
+}

@@ -1,0 +1,113 @@
+[
+  {
+    "mcg_code": "M085",
+    "mcg_original_code": "M-85",
+    "title": "Stroke: Hemorrhagic",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/isc/0224600b.htm",
+    "url_status": "canonical"
+  },
+  {
+    "mcg_code": "M190",
+    "mcg_original_code": "M-190",
+    "title": "Heart Failure",
+    "common_name": "CHF / Congestive Heart Failure",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/isc/0445010b.htm",
+    "url_status": "canonical"
+  },
+  {
+    "mcg_code": "M230",
+    "mcg_original_code": "M-230",
+    "title": "Myocardial Infarction",
+    "common_name": "AMI / Acute Myocardial Infarction",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/isc/0428150b.htm",
+    "url_status": "canonical"
+  },
+  {
+    "mcg_code": "M282",
+    "mcg_original_code": "M-282",
+    "title": "Pneumonia",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/isc/0555010b.htm",
+    "url_status": "canonical"
+  },
+  {
+    "mcg_code": "M100",
+    "mcg_original_code": "M-100",
+    "title": "Chronic Obstructive Pulmonary Disease",
+    "common_name": "COPD",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/isc/0517300b.htm",
+    "url_status": "canonical"
+  },
+  {
+    "mcg_code": "M180",
+    "mcg_original_code": "M-180",
+    "title": "Gastrointestinal Bleeding, Upper",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/index.html",
+    "url_status": "search_page",
+    "search_code": "m180"
+  },
+  {
+    "mcg_code": "M182",
+    "mcg_original_code": "M-182",
+    "title": "Gastrointestinal Bleeding, Lower",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/index.html",
+    "url_status": "search_page",
+    "search_code": "m182"
+  },
+  {
+    "mcg_code": "M005",
+    "mcg_original_code": "M-05",
+    "title": "Abdominal Pain",
+    "common_name": "Severe Abdominal Pain",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/index.html",
+    "url_status": "search_page",
+    "search_code": "m005"
+  },
+  {
+    "mcg_code": "M325",
+    "mcg_original_code": "M-325",
+    "title": "Renal Failure, Chronic",
+    "common_name": "CRF / Chronic Renal Failure",
+    "product": "ISC",
+    "org": "ORG-AP",
+    "url": "https://careweb.careguidelines.com/ed30/index.html",
+    "url_status": "search_page",
+    "search_code": "m325"
+  },
+  {
+    "mcg_code": "M130",
+    "mcg_original_code": "M-130",
+    "title": "Diabetes",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/index.html",
+    "url_status": "search_page",
+    "search_code": "m130"
+  },
+  {
+    "mcg_code": "M160",
+    "mcg_original_code": "M-160",
+    "title": "Sepsis and Other Febrile Illness, without Focal Infection",
+    "common_name": "Sepsis",
+    "product": "ISC",
+    "org": "ORG",
+    "url": "https://careweb.careguidelines.com/ed30/index.html",
+    "url_status": "search_page",
+    "search_code": "m160"
+  }
+]

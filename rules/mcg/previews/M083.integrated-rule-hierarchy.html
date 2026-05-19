@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>M083 Integrated Admission Rule Hierarchy</title>
+<style>
+@page {
+  size: A4 landscape;
+  margin: 8mm 7mm 9mm 7mm;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+  font-size: 9px;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  border-bottom: 2px solid #222;
+  padding-bottom: 5px;
+}
+h2 {
+  font-size: 15px;
+  margin: 12px 0 6px 0;
+  color: #0b3d69;
+}
+.subtitle {
+  font-size: 10px;
+  color: #555;
+}
+.main-admission {
+  font-size: 13px;
+  background: #eaf2fb;
+  border-left: 5px solid #1f5f99;
+  padding: 7px 9px;
+  margin-bottom: 8px;
+}
+ul {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-left: 18px;
+}
+li {
+  margin: 2px 0;
+}
+.path-block {
+  page-break-inside: avoid;
+  margin: 8px 0 10px 0;
+  padding: 7px;
+  border: 1px solid #c9d6e2;
+  border-radius: 5px;
+}
+.path-title {
+  font-size: 12px;
+  color: #0b3d69;
+  background: #eef5ff;
+  padding: 5px 7px;
+  border-left: 4px solid #1f5f99;
+  margin-bottom: 5px;
+}
+.node-line {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  white-space: pre-wrap;
+}
+.domain-node.linked > .node-line {
+  font-weight: 700;
+  color: #083b63;
+}
+.domain-node.linked-atomic > .node-line {
+  font-weight: 700;
+  color: #083b63;
+}
+.atomic-meta {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 8px;
+  color: #333;
+  margin: 2px 0;
+}
+.atomic-foot {
+  font-size: 7px;
+  color: #666;
+  margin-top: 2px;
+}
+.definition-appendix {
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+.admission-root {
+  margin-top: 14px;
+}
+h1.def-root {
+  font-size: 16px;
+  margin: 6px 0 4px 0;
+}
+h2.def-section {
+  font-size: 12px;
+  margin: 10px 0 4px 0;
+  color: #0b3d69;
+}
+.definition-appendix ul.def-key-list {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.definition-appendix ul.def-key-list li {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 9px;
+}
+.definition-appendix .def-none {
+  color: #777;
+  font-size: 9px;
+  margin: 2px 0 6px 0;
+}
+.unlinked-note {
+  color: #777;
+  font-size: 8px;
+  margin: 2px 0 4px 0;
+}
+.shared-box {
+  margin: 4px 0 5px 0;
+  padding: 6px 7px;
+  border-left: 4px solid #6b3fa0;
+  background: #f7f3fb;
+}
+.shared-title {
+  font-weight: 700;
+  color: #4b217d;
+}
+.source-title {
+  color: #555;
+  font-size: 8px;
+  margin-bottom: 4px;
+}
+.op {
+  font-weight: 800;
+  color: #5b2aa0;
+}
+.condition-key {
+  font-weight: 700;
+  color: #123f5d;
+}
+.atom-label {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 700;
+}
+.orig {
+  color: #555;
+  font-size: 8px;
+  margin-left: 2px;
+}
+.review {
+  color: #9a5b00;
+  font-weight: 700;
+}
+.missing, .cycle {
+  color: #b00020;
+}
+</style>
+</head>
+<body>
+<section class='top'>
+<h1>M083 Stroke: Ischemic - Integrated Admission Rule Hierarchy</h1>
+<div class='subtitle'>Admission only. Domain paths are shown with linked shared definitions embedded under each linked rule.</div>
+</section>
+<section class='definition-appendix'>
+<h1 class='def-root'>Definition</h1>
+<h2 class='def-section'>Composite Definitions</h2>
+<ul class='def-key-list'>
+<li>altered_mental_status_condition_present</li>
+<li>cardiac_arrhythmia_of_immediate_concern_condition_present</li>
+<li>dangerous_arrhythmia_condition_present</li>
+<li>hemodynamic_instability_condition_present</li>
+<li>hypotension_condition_present</li>
+<li>hypoxemia_condition_present</li>
+<li>orthostatic_hypotension_condition_present</li>
+<li>prolonged_cardiac_telemetry_monitoring_required</li>
+<li>respiratory_abnormality_condition_present</li>
+<li>tachycardia_condition_present</li>
+</ul>
+<h2 class='def-section'>Atomic Numeric Definitions</h2>
+<ul class='def-key-list'>
+<li>arterial_or_venous_ph</li>
+<li>arterial_po2_mmhg</li>
+<li>diastolic_blood_pressure_mmhg</li>
+<li>lactate_mmol_l</li>
+<li>mean_arterial_pressure_mmhg</li>
+<li>nihss_score</li>
+<li>orthostatic_diastolic_blood_pressure_drop_mmhg</li>
+<li>orthostatic_systolic_blood_pressure_drop_mmhg</li>
+<li>shock_index</li>
+<li>spo2_percent</li>
+</ul>
+<h2 class='def-section'>Atomic Boolean / Leaf Definitions</h2>
+<ul class='def-key-list'>
+<li>acute_ischemic_stroke_condition_present</li>
+<li>acute_myocarditis_condition_present</li>
+<li>aphasia_condition_present</li>
+<li>automatic_icd_firing_malfunction_or_setting_adjustment_needed_condition_present</li>
+<li>baseline_sbp_decrease_with_symptoms_condition_present</li>
+<li>brain_imaging_finding_requiring_inpatient_care_condition_present</li>
+<li>cerebral_venous_thrombosis_condition_present</li>
+<li>clinically_active_atrial_fibrillation_condition_present</li>
+<li>clinically_significant_cardiac_or_vascular_disorder_condition_present</li>
+<li>coma_condition_present</li>
+<li>confusional_state_condition_present</li>
+<li>continuous_long_term_ecg_monitoring_needed_condition_present</li>
+<li>dangerous_arrhythmia_associated_significant_symptoms_condition_present</li>
+<li>dysphagia_evaluation_required</li>
+<li>end_organ_dysfunction_due_to_hypotension_condition_present</li>
+<li>gait_impairment_condition_present</li>
+<li>hemorrhagic_transformation_condition_present</li>
+<li>hypotension_in_dangerous_arrhythmia_context_condition_present</li>
+<li>increased_supplemental_oxygen_from_baseline_condition_present</li>
+<li>lethargy_condition_present</li>
+<li>myocardial_ischemia_condition_present</li>
+<li>neurologic_worsening_monitoring_required</li>
+<li>new_onset_lbbb_with_suspected_myocardial_ischemia_condition_present</li>
+<li>nonsustained_ventricular_tachycardia_condition_present</li>
+<li>obtundation_condition_present</li>
+<li>persistence_despite_appropriate_treatment_context_present</li>
+<li>prolonged_telemetry_beyond_observation_required</li>
+<li>respiratory_distress_in_dangerous_arrhythmia_context_condition_present</li>
+<li>resuscitated_ventricular_fibrillation_or_cardiac_arrest_condition_present</li>
+<li>significant_limb_weakness_condition_present</li>
+<li>stupor_condition_present</li>
+<li>supplemental_oxygen_required_to_maintain_targets_condition_present</li>
+<li>suspected_cardiac_ischemia_as_cause_or_consequence_of_vt_condition_present</li>
+<li>suspected_vasculitis_condition_present</li>
+<li>sustained_ventricular_tachycardia_condition_present</li>
+<li>third_degree_av_block_condition_present</li>
+<li>thrombolysis_or_thrombectomy_performed_or_planned_condition_present</li>
+<li>type_ii_second_degree_av_block_condition_present</li>
+<li>vasopressor_or_inotrope_required</li>
+<li>ventricular_escape_rhythm_condition_present</li>
+</ul>
+<h2 class='def-section'>Needs Review / Pediatric Placeholders</h2>
+<ul class='def-key-list'>
+<li>atrial_fibrillation_detection_only_context_absent</li>
+<li>clinical_stability_unclear_condition_present</li>
+<li>heart_rate_bpm</li>
+<li>impaired_airway_protection_condition_present</li>
+<li>pediatric_hypoperfusion_due_to_hypotension_condition_present</li>
+<li>pediatric_severe_hypertension_threshold_condition_present</li>
+<li>pediatric_shock_index_threshold_condition_present</li>
+<li>pediatric_systolic_blood_pressure_threshold_condition_present</li>
+<li>pediatric_vasopressor_or_inotrope_required</li>
+<li>systolic_blood_pressure_mmhg</li>
+</ul>
+</section>
+<section class='admission-root'>
+<h2>M083</h2>
+<div class='main-admission'><b>Admission is indicated for 1 or more of the following</b></div>
+<ul class='path-list'>
+<li class='path-block'>
+<div class='path-title'><b>Path 1: Acute ischemic stroke with neurologic findings that warrant inpatient care, as indicated by 1 or more of the following</b></div>
+<ul class='domain-tree'>
+<li class='domain-node'><div class='node-line'>[composite / AND] Acute ischemic stroke with neurologic findings that warrant inpatient care, as indicated by 1 or more of the following</div>
+<ul>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[context / IS_TRUE / acute_ischemic_stroke_condition_present] Acute ischemic stroke</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: acute_ischemic_stroke_condition_present -> atom.M083.admission.acute_ischemic_stroke_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Acute ischemic stroke</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OR] Acute ischemic stroke [ A ] with neurologic findings that warrant inpatient care, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / &gt; / nihss_score] National Institutes of Health Stroke Scale (NIHSS) score greater than 2 [ B ] ( 2 ) ( 9 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: nihss_score -> atom.M083.admission.nihss_score</div>
+<div class='atomic-meta'>NIHSS &gt; 2 score</div>
+<div class='orig'>National Institutes of Health Stroke Scale (NIHSS) score greater than 2 [ B ] ( 2 ) ( 9 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_numeric_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / hemorrhagic_transformation_condition_present] Evidence of hemorrhagic transformation ( 4 ) ( 9 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: hemorrhagic_transformation_condition_present -> atom.M083.admission.hemorrhagic_transformation_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Evidence of hemorrhagic transformation ( 4 ) ( 9 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked'><div class='node-line'>[atomic / IS_TRUE / altered_mental_status_condition_present] Altered mental status ( 10 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared definition: altered_mental_status_condition_present -> comp.altered_mental_status.root</div>
+<div class='source-title'>Source: Definition - Altered mental status</div>
+<ul class='shared-tree'>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>altered_mental_status_condition_present</span></div>
+<div class='orig'>Altered mental status (ie, different from baseline), as indicated by 1 or more of the following</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>confusional_state_condition_present</span><div class='orig'>Confusional state (eg, disorientation, difficulty following commands, deficit in attention)</div></li>
+<li class='shared-atom'><span class='atom-label'>lethargy_condition_present</span><div class='orig'>Lethargy (eg, awake or arousable, but with drowsiness; reduced awareness of self and environment)</div></li>
+<li class='shared-atom'><span class='atom-label'>obtundation_condition_present</span><div class='orig'>Obtundation (ie, arousable only with strong stimuli, lessened interest in environment, slowed responses to stimulation)</div></li>
+<li class='shared-atom'><span class='atom-label'>stupor_condition_present</span><div class='orig'>Stupor (ie, may be arousable but patient does not return to normal baseline level of awareness)</div></li>
+<li class='shared-atom'><span class='atom-label'>coma_condition_present</span><div class='orig'>Coma (ie, not arousable)</div></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / dysphagia_evaluation_required] Dysphagia that warrants evaluation (eg, aspiration risk suspected) ( 2 ) ( 9 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: dysphagia_evaluation_required -> atom.M083.admission.dysphagia_evaluation_required</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Dysphagia that warrants evaluation (eg, aspiration risk suspected) ( 2 ) ( 9 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / significant_limb_weakness_condition_present] Significant arm or leg weakness (eg, limiting movement against gravity) ( 4 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: significant_limb_weakness_condition_present -> atom.M083.admission.significant_limb_weakness_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Significant arm or leg weakness (eg, limiting movement against gravity) ( 4 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / aphasia_condition_present] Aphasia ( 4 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: aphasia_condition_present -> atom.M083.admission.aphasia_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Aphasia ( 4 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / gait_impairment_condition_present] Gait impairment ( 4 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: gait_impairment_condition_present -> atom.M083.admission.gait_impairment_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Gait impairment ( 4 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / brain_imaging_finding_requiring_inpatient_care_condition_present] Finding on brain imaging that requires inpatient care (eg, edema, threatened herniation) ( 2 ) ( 9 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: brain_imaging_finding_requiring_inpatient_care_condition_present -> atom.M083.admission.brain_imaging_finding_requiring_inpatient_care_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Finding on brain imaging that requires inpatient care (eg, edema, threatened herniation) ( 2 ) ( 9 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / neurologic_worsening_monitoring_required] Clinical monitoring for neurologic worsening needed (eg, large infarct, posterior circulation infarct) [ C ] ( 2 ) ( 9 ) ( 11 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: neurologic_worsening_monitoring_required -> atom.M083.admission.neurologic_worsening_monitoring_required</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Clinical monitoring for neurologic worsening needed (eg, large infarct, posterior circulation infarct) [ C ] ( 2 ) ( 9 ) ( 11 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / clinical_stability_unclear_condition_present] Clinical stability unclear (eg, recurrent or worsening findings)</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: clinical_stability_unclear_condition_present -> atom.M083.admission.clinical_stability_unclear_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Clinical stability unclear (eg, recurrent or worsening findings)</div>
+<div class='atomic-foot'>review_status=needs_review source_strategy=manual_review_placeholder</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='path-block'>
+<div class='path-title'><b>Path 2: Acute ischemic stroke with clinical need for inpatient care or monitoring, as indicated by 1 or more of the following</b></div>
+<ul class='domain-tree'>
+<li class='domain-node'><div class='node-line'>[composite / AND] Acute ischemic stroke with clinical need for inpatient care or monitoring, as indicated by 1 or more of the following</div>
+<ul>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[context / IS_TRUE / acute_ischemic_stroke_condition_present] Acute ischemic stroke</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: acute_ischemic_stroke_condition_present -> atom.M083.admission.acute_ischemic_stroke_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Acute ischemic stroke</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OR] Acute ischemic stroke [ A ] with clinical need for inpatient care or monitoring, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='domain-node linked'><div class='node-line'>[atomic / IS_TRUE / hemodynamic_instability_condition_present] Hemodynamic instability ( 2 ) ( 9 ) ( 12 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared definition: hemodynamic_instability_condition_present -> comp.hemodynamic_instability.root</div>
+<div class='source-title'>Source: Definition - Hemodynamic instability</div>
+<ul class='shared-tree'>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hemodynamic_instability_condition_present</span></div>
+<div class='orig'>Hemodynamic instability, as indicated by 1 or more of the following</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>vital_sign_abnormality_not_corrected_condition_present</span></div>
+<div class='orig'>Vital sign abnormality not corrected by appropriate treatment, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>persistent_tachycardia_condition_present</span></div>
+<div class='orig'>Tachycardia that persists despite appropriate treatment (eg, treatment of underlying cause, despite observation care)</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>tachycardia_condition_present</span></div>
+<div class='orig'>Tachycardia,[A][B] as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>heart_rate &gt; 100 bpm</span><div class='orig'>Heart rate greater than 100 beats per minute in adult[A][B](1)</div></li>
+<li class='shared-atom'><span class='atom-label'>heart_rate &gt; 85 bpm</span> <span class='review'>(needs_review)</span><div class='orig'>Heart rate greater than 85 beats per minute in child 13 to 17 years of age[A][C](2)</div></li>
+<li class='shared-atom'><span class='atom-label'>heart_rate &gt; 95 bpm</span> <span class='review'>(needs_review)</span><div class='orig'>Heart rate greater than 95 beats per minute in child 6 to 12 years of age[A][C](2)</div></li>
+<li class='shared-atom'><span class='atom-label'>heart_rate &gt; 110 bpm</span> <span class='review'>(needs_review)</span><div class='orig'>Heart rate greater than 110 beats per minute in child 1 to 5 years of age[A][C](2)</div></li>
+<li class='shared-atom'><span class='atom-label'>heart_rate &gt; 120 bpm</span> <span class='review'>(needs_review)</span><div class='orig'>Heart rate greater than 120 beats per minute in infant 3 to 11 months of age[A][C](2)</div></li>
+<li class='shared-atom'><span class='atom-label'>heart_rate &gt; 150 bpm</span> <span class='review'>(needs_review)</span><div class='orig'>Heart rate greater than 150 beats per minute in infant 1 or 2 months of age[A][C](2)</div></li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>persistence_despite_appropriate_treatment_context_present</span><div class='orig'>persists despite appropriate treatment</div></li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>persistent_hypotension_condition_present</span></div>
+<div class='orig'>Hypotension that persists despite appropriate treatment (eg, treatment of underlying cause, despite observation care)</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypotension_condition_present</span></div>
+<div class='orig'>Hypotension, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypotension_in_adult_patient_condition_present</span></div>
+<div class='orig'>Hypotension in adult patient, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 90 mmHg</span><div class='orig'>Systolic blood pressure less than 90 mm Hg[A][B](1)</div></li>
+<li class='shared-atom'><span class='atom-label'>MAP &lt; 70 mmHg</span><div class='orig'>Mean arterial pressure[C] less than 70 mm Hg[A][B] MAP Calculator(1)(2)</div></li>
+<li class='shared-atom'><span class='atom-label'>baseline_sbp_decrease_with_symptoms_condition_present</span><div class='orig'>Decrease in baseline systolic blood pressure of 30 mm Hg or more, with significant signs or symptoms due to lower blood pressure (eg, near syncope, syncope, chest pain)[A][B](1)</div></li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypotension_in_pediatric_patient_condition_present</span></div>
+<div class='orig'>Hypotension in pediatric patient, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 110 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 110 mm Hg in child 13 to 17 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 100 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 100 mm Hg in child 6 to 12 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 95 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 95 mm Hg in child 3 to 5 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 90 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 90 mm Hg in child 1 or 2 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 80 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 80 mm Hg in infant 6 to 11 months of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 70 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 70 mm Hg in infant 3 to 5 months of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 65 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 65 mm Hg in infant 1 or 2 months of age[A][D](3)</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>persistence_despite_appropriate_treatment_context_present</span><div class='orig'>persists despite appropriate treatment</div></li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>persistent_orthostatic_hypotension_condition_present</span></div>
+<div class='orig'>Orthostatic hypotension that persists despite appropriate treatment (eg, treatment of underlying cause, despite observation care)</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>orthostatic_hypotension_condition_present</span></div>
+<div class='orig'>Orthostatic hypotension,[A][B] as indicated by 1 or more of the following(1)(2)(3):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>orthostatic_SBP_drop &gt;= 20 mmHg</span><div class='orig'>Fall in SBP of 20 mm Hg or more 1 to 3 minutes after patient sits or stands from recumbent position</div></li>
+<li class='shared-atom'><span class='atom-label'>orthostatic_DBP_drop &gt;= 10 mmHg</span><div class='orig'>Fall in DBP of 10 mm Hg or more 1 to 3 minutes after patient sits or stands from recumbent position</div></li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>persistence_despite_appropriate_treatment_context_present</span><div class='orig'>persists despite appropriate treatment</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>severe_adult_hypotension_condition_present</span></div>
+<div class='orig'>Severe hypotension in adult patient, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 80 mmHg</span><div class='orig'>Systolic blood pressure less than 80 mm Hg</div></li>
+<li class='shared-atom'><span class='atom-label'>shock_index &gt; 1.0 ratio</span><div class='orig'>Shock index greater than 1.0 (shock index is the heart rate divided by systolic blood pressure)</div></li>
+<li class='shared-atom'><span class='atom-label'>MAP &lt; 65 mmHg</span><div class='orig'>Mean arterial pressure[B] less than 65 mm Hg MAP Calculator[A](1)(6)</div></li>
+<li class='shared-atom'><span class='atom-label'>vasopressor_or_inotrope_required</span><div class='orig'>IV inotropic or vasopressor medication required to maintain adequate blood pressure or perfusion</div></li>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>hypoperfusion_due_to_hypotension_condition_present</span></div>
+<div class='orig'>Hypoperfusion due to hypotension, as indicated by ALL of the following:</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypotension_condition_present</span></div>
+<div class='orig'>Hypotension, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypotension_in_adult_patient_condition_present</span></div>
+<div class='orig'>Hypotension in adult patient, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 90 mmHg</span><div class='orig'>Systolic blood pressure less than 90 mm Hg[A][B](1)</div></li>
+<li class='shared-atom'><span class='atom-label'>MAP &lt; 70 mmHg</span><div class='orig'>Mean arterial pressure[C] less than 70 mm Hg[A][B] MAP Calculator(1)(2)</div></li>
+<li class='shared-atom'><span class='atom-label'>baseline_sbp_decrease_with_symptoms_condition_present</span><div class='orig'>Decrease in baseline systolic blood pressure of 30 mm Hg or more, with significant signs or symptoms due to lower blood pressure (eg, near syncope, syncope, chest pain)[A][B](1)</div></li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypotension_in_pediatric_patient_condition_present</span></div>
+<div class='orig'>Hypotension in pediatric patient, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 110 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 110 mm Hg in child 13 to 17 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 100 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 100 mm Hg in child 6 to 12 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 95 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 95 mm Hg in child 3 to 5 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 90 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 90 mm Hg in child 1 or 2 years of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 80 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 80 mm Hg in infant 6 to 11 months of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 70 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 70 mm Hg in infant 3 to 5 months of age[A][D](3)</div></li>
+<li class='shared-atom'><span class='atom-label'>SBP &lt; 65 mmHg</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 65 mm Hg in infant 1 or 2 months of age[A][D](3)</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypoperfusion_evidence_condition_present</span></div>
+<div class='orig'>Evidence of hypoperfusion, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>lactate &gt;= 2.0 mmol/L</span><div class='orig'>Lactate of 2.0 mmol/L (18 mg/dL) or more secondary to hypotension (ie, hypoperfusion)</div></li>
+<li class='shared-atom'><span class='atom-label'>pH &lt; 7.35 pH</span><div class='orig'>Metabolic acidosis (arterial or venous pH less than 7.35) not otherwise explained</div></li>
+<li class='shared-atom'><span class='atom-label'>end_organ_dysfunction_due_to_hypotension_condition_present</span><div class='orig'>Significant end organ dysfunction due to hypotension (eg, Altered mental status, myocardial ischemia, 2-fold or higher acute increase in serum creatinine)</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>severe_pediatric_hypotension_condition_present</span></div>
+<div class='orig'>Severe hypotension in pediatric patient, as indicated by 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>pediatric_systolic_blood_pressure_threshold_condition_present</span> <span class='review'>(needs_review)</span><div class='orig'>Systolic blood pressure less than 80 mm Hg in child 6 to 17 years of age[A](14) Systolic blood pressure less than 75 mm Hg in child 6 months to 5 years of age[A](14)</div></li>
+<li class='shared-atom'><span class='atom-label'>pediatric_shock_index_threshold_condition_present</span> <span class='review'>(needs_review)</span><div class='orig'>Shock index greater than 0.9 in child 13 to 17 years of age (shock index is the heart rate divided by systolic blood pressure)[A](2)(15) Shock index greater than 1.0 in child 7 to 12 years of age (shock index is the heart rate divided by systolic blood pressure)[A](2)(15) Shock index greater than 1.2 in child 4 to 6 years of age (shock index is the heart rate divided by systolic blood pressure)[A](2)(15)</div></li>
+<li class='shared-atom'><span class='atom-label'>pediatric_vasopressor_or_inotrope_required</span> <span class='review'>(needs_review)</span><div class='orig'>IV inotropic or vasopressor medication required to maintain adequate blood pressure or perfusion</div></li>
+<li class='shared-atom'><span class='atom-label'>pediatric_hypoperfusion_due_to_hypotension_condition_present</span> <span class='review'>(needs_review)</span><div class='orig'>Hypoperfusion due to hypotension, as indicated by ALL of the following: Hypotension Evidence of hypoperfusion, as indicated by 1 or more of the following: Lactate of 2.0 mmol/L (18 mg/dL) or more secondary to hypotension (ie, hypoperfusion)[C](6)(8) Metabolic acidosis (arterial or venous pH less than 7.35) not otherwise explained[D](5)(6)(14) Significant end organ dysfunction due to hypotension (eg, Altered mental status, myocardial ischemia, 2-fold or higher acute increase in serum creatinine)(5)(6)(14)</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li class='domain-node linked'><div class='node-line'>[atomic / IS_TRUE / cardiac_arrhythmia_of_immediate_concern_condition_present] Cardiac arrhythmias of immediate concern ( 9 ) ( 13 ) ( 14 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared definition: cardiac_arrhythmia_of_immediate_concern_condition_present -> comp.cardiac_arrhythmia_immediate.root</div>
+<div class='source-title'>Source: Definition - Cardiac arrhythmias of immediate concern</div>
+<ul class='shared-tree'>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>cardiac_arrhythmia_of_immediate_concern_condition_present</span></div>
+<div class='orig'>Cardiac arrhythmias or findings of immediate concern, as indicated by 1 or more of the following(1)(2)(3):</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>dangerous_arrhythmia_condition_present</span></div>
+<div class='orig'>Dangerous arrhythmia, as indicated by 1 or more of the following(1)(2)(3)(4):</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>dangerous_inherently_unstable_rhythm_mechanisms_condition_present</span></div>
+<div class='orig'>Heart rhythms that are inherently dangerous or unstable, as indicated by 1 or more of the following(5)(6):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>resuscitated_ventricular_fibrillation_or_cardiac_arrest_condition_present</span><div class='orig'>Resuscitated ventricular fibrillation or cardiac arrest</div></li>
+<li class='shared-atom'><span class='atom-label'>ventricular_escape_rhythm_condition_present</span><div class='orig'>Ventricular escape rhythm</div></li>
+<li class='shared-atom'><span class='atom-label'>sustained_ventricular_tachycardia_condition_present</span><div class='orig'>Sustained ventricular tachycardia (30 seconds or more of ventricular rhythm at greater than 100 beats per minute)</div></li>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>nonsustained_vt_with_comorbidity_condition_present</span> <span class='review'>(needs_review)</span></div>
+<div class='orig'>Nonsustained ventricular tachycardia and 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>nonsustained_ventricular_tachycardia_condition_present</span><div class='orig'>Nonsustained ventricular tachycardia and 1 or more of the following:</div></li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>nsvt_with_acute_myocarditis_or_myocardial_ischemia_condition_present</span></div>
+<div class='orig'>Nonsustained ventricular tachycardia and 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>acute_myocarditis_condition_present</span><div class='orig'>Acute myocarditis</div></li>
+<li class='shared-atom'><span class='atom-label'>myocardial_ischemia_condition_present</span><div class='orig'>Myocardial ischemia</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>unstable_cardiac_conduction_defects_condition_present</span></div>
+<div class='orig'>Unstable cardiac conduction defects, as indicated by 1 or more of the following(7):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>type_ii_second_degree_av_block_condition_present</span><div class='orig'>Type II second-degree atrioventricular block</div></li>
+<li class='shared-atom'><span class='atom-label'>third_degree_av_block_condition_present</span><div class='orig'>Third-degree atrioventricular block</div></li>
+<li class='shared-atom'><span class='atom-label'>new_onset_lbbb_with_suspected_myocardial_ischemia_condition_present</span><div class='orig'>New-onset left bundle branch block with suspected myocardial ischemia</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>dangerous_rhythm_hemodynamic_or_symptom_concern_condition_present</span></div>
+<div class='orig'>Heart rhythms of concern due to 1 or more of the following(8):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>hypotension_in_dangerous_arrhythmia_context_condition_present</span><div class='orig'>Hypotension</div></li>
+<li class='shared-atom'><span class='atom-label'>respiratory_distress_in_dangerous_arrhythmia_context_condition_present</span><div class='orig'>Respiratory distress</div></li>
+<li class='shared-atom'><span class='atom-label'>dangerous_arrhythmia_associated_significant_symptoms_condition_present</span><div class='orig'>Association with other significant symptoms (eg, syncope)(7)(9)(10)(11)</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>clinically_active_atrial_fibrillation_condition_present</span><div class='orig'>Clinically active atrial fibrillation refers to atrial fibrillation necessitating electrical cardioversion or treatment with parenteral (IV) medication, while hospitalized, to control heart rate (eg, digoxin, diltiazem, metoprolol) or to cardiovert (eg, amiodarone, procainamide).</div></li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>other_immediate_cardiac_arrhythmia_concern_condition_present</span></div>
+<div class='orig'>Any heart rhythm and 1 or more of the following(5)(8)(10)(11)(12)(13):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>suspected_cardiac_ischemia_as_cause_or_consequence_of_vt_condition_present</span><div class='orig'>Suspected cardiac ischemia as cause or consequence of ventricular tachycardia</div></li>
+<li class='shared-atom'><span class='atom-label'>continuous_long_term_ecg_monitoring_needed_condition_present</span><div class='orig'>Continuous long-term ECG monitoring needed (eg, initiation of drug requiring monitoring beyond observation care)</div></li>
+<li class='shared-atom'><span class='atom-label'>automatic_icd_firing_malfunction_or_setting_adjustment_needed_condition_present</span><div class='orig'>Patient has automatic implantable cardioverter-defibrillator that is repeatedly firing, malfunctioning, or in need of immediate adjustment of settings beyond scope of observation care.</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / clinically_significant_cardiac_or_vascular_disorder_condition_present] Clinically significant cardiac or vascular disorder identified (eg, on echocardiogram, imaging) that requires inpatient care (eg, severe valvular disease, atrial myxoma, cervical artery dissection) ( 15 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: clinically_significant_cardiac_or_vascular_disorder_condition_present -> atom.M083.admission.clinically_significant_cardiac_or_vascular_disorder_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Clinically significant cardiac or vascular disorder identified (eg, on echocardiogram, imaging) that requires inpatient care (eg, severe valvular disease, atrial myxoma, cervical artery dissection) ( 15 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / cerebral_venous_thrombosis_condition_present] Ischemic stroke due to cerebral venous thrombosis [ D ] ( 1 ) ( 16 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: cerebral_venous_thrombosis_condition_present -> atom.M083.admission.cerebral_venous_thrombosis_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Ischemic stroke due to cerebral venous thrombosis [ D ] ( 1 ) ( 16 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node linked'><div class='node-line'>[atomic / IS_TRUE / respiratory_abnormality_condition_present] Respiratory abnormalities (eg, Hypoxemia , impaired airway protection) ( 2 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared definition: respiratory_abnormality_condition_present -> comp.respiratory_abnormality.root</div>
+<div class='source-title'>Source: Definition - Hypoxemia</div>
+<ul class='shared-tree'>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>respiratory_abnormality_condition_present</span></div>
+<div class='orig'>Respiratory abnormalities (eg, Hypoxemia, impaired airway protection)</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypoxemia_condition_present</span></div>
+<div class='orig'>Hypoxemia, as indicated by 1 or more of the following(1):</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>hypoxemia_room_air_saturation_or_pao2_criteria_condition_present</span></div>
+<div class='orig'>Patient without baseline need for supplemental oxygen with oxygen saturation (SpO2) of less than 90% or arterial blood gas partial pressure of oxygen (PaO2) of less than 60 mm Hg (8.0 kPa) on room air[A][B]</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>SpO2 &lt; 90 %</span><div class='orig'>Patient without baseline need for supplemental oxygen with oxygen saturation (SpO2) of less than 90% or arterial blood gas partial pressure of oxygen (PaO2) of less than 60 mm Hg (8.0 kPa) on room air[A][B]</div></li>
+<li class='shared-atom'><span class='atom-label'>PaO2 &lt; 60 mmHg</span><div class='orig'>Patient without baseline need for supplemental oxygen with oxygen saturation (SpO2) of less than 90% or arterial blood gas partial pressure of oxygen (PaO2) of less than 60 mm Hg (8.0 kPa) on room air[A][B]</div></li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>supplemental_oxygen_required_to_maintain_targets_condition_present</span><div class='orig'>Patient without baseline need for supplemental oxygen who now requires supplemental oxygen to keep SpO2 greater than 89% or PaO2 greater than 59 mm Hg (7.9 kPa)[A]</div></li>
+<li class='shared-atom'><span class='atom-label'>increased_supplemental_oxygen_from_baseline_condition_present</span><div class='orig'>Patient with baseline need for supplemental oxygen who now requires increased supplemental oxygen to maintain oxygenation at baseline or acceptable level</div></li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>impaired_airway_protection_condition_present</span> <span class='review'>(needs_review)</span><div class='orig'>impaired airway protection</div></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li class='domain-node linked'><div class='node-line'>[atomic / IS_TRUE / prolonged_cardiac_telemetry_monitoring_required] Prolonged cardiac telemetry monitoring needed (eg, beyond observation care time frame) due to concern for Dangerous arrhythmia (ie, not in effort to detect atrial fibrillation) [ G ]</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared definition: prolonged_cardiac_telemetry_monitoring_required -> comp.prolonged_cardiac_telemetry_monitoring.root</div>
+<div class='source-title'>Source: Definition - Cardiac arrhythmias of immediate concern</div>
+<ul class='shared-tree'>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>prolonged_cardiac_telemetry_monitoring_required</span></div>
+<div class='orig'>Prolonged cardiac telemetry monitoring needed (eg, beyond observation care time frame) due to concern for Dangerous arrhythmia (ie, not in effort to detect atrial fibrillation) [ G ]</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>prolonged_telemetry_beyond_observation_required</span><div class='orig'>Prolonged cardiac telemetry monitoring needed (eg, beyond observation care time frame)</div></li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>dangerous_arrhythmia_condition_present</span></div>
+<div class='orig'>Dangerous arrhythmia, as indicated by 1 or more of the following(1)(2)(3)(4):</div>
+<ul>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>dangerous_inherently_unstable_rhythm_mechanisms_condition_present</span></div>
+<div class='orig'>Heart rhythms that are inherently dangerous or unstable, as indicated by 1 or more of the following(5)(6):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>resuscitated_ventricular_fibrillation_or_cardiac_arrest_condition_present</span><div class='orig'>Resuscitated ventricular fibrillation or cardiac arrest</div></li>
+<li class='shared-atom'><span class='atom-label'>ventricular_escape_rhythm_condition_present</span><div class='orig'>Ventricular escape rhythm</div></li>
+<li class='shared-atom'><span class='atom-label'>sustained_ventricular_tachycardia_condition_present</span><div class='orig'>Sustained ventricular tachycardia (30 seconds or more of ventricular rhythm at greater than 100 beats per minute)</div></li>
+<li class='shared-comp'>
+<div><span class='op'>AND</span> <span class='condition-key'>nonsustained_vt_with_comorbidity_condition_present</span> <span class='review'>(needs_review)</span></div>
+<div class='orig'>Nonsustained ventricular tachycardia and 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>nonsustained_ventricular_tachycardia_condition_present</span><div class='orig'>Nonsustained ventricular tachycardia and 1 or more of the following:</div></li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>nsvt_with_acute_myocarditis_or_myocardial_ischemia_condition_present</span></div>
+<div class='orig'>Nonsustained ventricular tachycardia and 1 or more of the following:</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>acute_myocarditis_condition_present</span><div class='orig'>Acute myocarditis</div></li>
+<li class='shared-atom'><span class='atom-label'>myocardial_ischemia_condition_present</span><div class='orig'>Myocardial ischemia</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>unstable_cardiac_conduction_defects_condition_present</span></div>
+<div class='orig'>Unstable cardiac conduction defects, as indicated by 1 or more of the following(7):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>type_ii_second_degree_av_block_condition_present</span><div class='orig'>Type II second-degree atrioventricular block</div></li>
+<li class='shared-atom'><span class='atom-label'>third_degree_av_block_condition_present</span><div class='orig'>Third-degree atrioventricular block</div></li>
+<li class='shared-atom'><span class='atom-label'>new_onset_lbbb_with_suspected_myocardial_ischemia_condition_present</span><div class='orig'>New-onset left bundle branch block with suspected myocardial ischemia</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-comp'>
+<div><span class='op'>OR</span> <span class='condition-key'>dangerous_rhythm_hemodynamic_or_symptom_concern_condition_present</span></div>
+<div class='orig'>Heart rhythms of concern due to 1 or more of the following(8):</div>
+<ul>
+<li class='shared-atom'><span class='atom-label'>hypotension_in_dangerous_arrhythmia_context_condition_present</span><div class='orig'>Hypotension</div></li>
+<li class='shared-atom'><span class='atom-label'>respiratory_distress_in_dangerous_arrhythmia_context_condition_present</span><div class='orig'>Respiratory distress</div></li>
+<li class='shared-atom'><span class='atom-label'>dangerous_arrhythmia_associated_significant_symptoms_condition_present</span><div class='orig'>Association with other significant symptoms (eg, syncope)(7)(9)(10)(11)</div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='shared-atom'><span class='atom-label'>atrial_fibrillation_detection_only_context_absent</span> <span class='review'>(needs_review)</span><div class='orig'>due to concern for Dangerous arrhythmia (ie, not in effort to detect atrial fibrillation)</div></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / suspected_vasculitis_condition_present] Suspected vasculitis ( 21 ) ( 22 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: suspected_vasculitis_condition_present -> atom.M083.admission.suspected_vasculitis_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Suspected vasculitis ( 21 ) ( 22 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+<li class='domain-node'><div class='node-line'>[composite / OR] Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )</div>
+<ul>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / &gt; / systolic_blood_pressure_mmhg] Systolic blood pressure greater than 180 mm Hg</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: systolic_blood_pressure_mmhg -> atom.M083.admission.systolic_blood_pressure_mmhg</div>
+<div class='atomic-meta'>SBP &gt; 180 mmHg</div>
+<div class='orig'>Systolic blood pressure greater than 180 mm Hg</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_numeric_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / &gt; / diastolic_blood_pressure_mmhg] Diastolic blood pressure greater than 120 mm Hg</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: diastolic_blood_pressure_mmhg -> atom.M083.admission.diastolic_blood_pressure_mmhg</div>
+<div class='atomic-meta'>DBP &gt; 120 mmHg</div>
+<div class='orig'>Diastolic blood pressure greater than 120 mm Hg</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_numeric_leaf</div>
+</div>
+</li>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / pediatric_severe_hypertension_threshold_condition_present] Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: pediatric_severe_hypertension_threshold_condition_present -> atom.M083.admission.pediatric_severe_hypertension_threshold_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )</div>
+<div class='atomic-foot'>review_status=needs_review source_strategy=pediatric_placeholder</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='path-block'>
+<div class='path-title'><b>Path 3: Thrombolysis or thrombectomy performed or planned</b></div>
+<ul class='domain-tree'>
+<li class='domain-node linked linked-atomic'><div class='node-line'>[atomic / IS_TRUE / thrombolysis_or_thrombectomy_performed_or_planned_condition_present] Thrombolysis or thrombectomy performed or planned [ H ] ( 2 ) ( 23 ) ( 24 )</div>
+<div class='shared-box'>
+<div class='shared-title'>Linked shared atomic definition: thrombolysis_or_thrombectomy_performed_or_planned_condition_present -> atom.M083.admission.thrombolysis_or_thrombectomy_performed_or_planned_condition_present</div>
+<div class='atomic-meta'>IS_TRUE</div>
+<div class='orig'>Thrombolysis or thrombectomy performed or planned [ H ] ( 2 ) ( 23 ) ( 24 )</div>
+<div class='atomic-foot'>review_status=ok source_strategy=domain_source_atomic_leaf</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</body>
+</html>

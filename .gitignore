@@ -22,3 +22,6 @@ rules/mcg/source-trees/*.json
 
 rules/mcg/audits/*
 !rules/mcg/audits/.gitkeep
+
+.deps/
+.pw-browsers/

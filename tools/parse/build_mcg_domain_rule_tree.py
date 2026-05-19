@@ -27,7 +27,59 @@ def ref_hash(mcg: str, sid: str) -> str:
 def leaf_condition_key(mcg: str, sid: str) -> str:
     """Stable non–source-id condition key for auto-generated atomic leaves (no src_ / source_ fragments)."""
     h = hashlib.sha256(str(sid).encode()).hexdigest()[:16]
-    return f"leaf_{mcg}_{h}"
+    mc = re.sub(r"[^a-z0-9]", "", str(mcg).strip().lower())
+    return f"leaf_{mc}_{h}"
+
+
+def normalized_admission_headline(text: str) -> str:
+    """Admission bullet opener for deterministic substring matching."""
+    t = strip_txt(text or "")
+    t = t.lower()
+    t = re.sub(r"\[\s*[a-z]\s*\]", "", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _m190_sorted_atomic_pairs() -> tuple[tuple[str, str], ...]:
+    pairs: list[tuple[str, str]] = [
+        ("hemodynamic instability", "hemodynamic_instability_condition_present"),
+        ("severe electrolyte abnormalities requiring inpatient care", "severe_electrolyte_abnormality_requiring_inpatient_care_condition_present"),
+        ("cardiac arrhythmias of immediate concern", "cardiac_arrhythmia_of_immediate_concern_condition_present"),
+        ("acute myocardial ischemia causing or associated with failure", "acute_myocardial_ischemia_with_heart_failure_admission_condition_present"),
+        ("pulmonary edema that is very severe", "very_severe_pulmonary_edema_condition_present"),
+        ("anasarca or peripheral edema that is severe", "severe_anasarca_or_peripheral_edema_condition_present"),
+        ("tachypnea that persists despite observation care", "persistent_tachypnea_despite_observation_care_condition_present"),
+        ("dyspnea (above baseline) that persists despite observation care", "persistent_dyspnea_above_baseline_despite_observation_care_condition_present"),
+        ("altered mental status that is severe or persistent", "altered_mental_status_severe_or_persistent_condition_present"),
+        ("increased creatinine with reduction of more than 50%", "acute_renal_insufficiency_evidence_gt_50pct_egfr_reduction_from_baseline_condition_present"),
+        ("progressively (ongoing) rising creatinine with reduction of more than 25%", "progressive_renal_insufficiency_evidence_gt_25pct_egfr_reduction_condition_present"),
+        ("pulmonary artery catheter monitoring needed", "pulmonary_artery_catheter_monitoring_needed_condition_present"),
+    ]
+    pairs.sort(key=lambda x: len(x[0]), reverse=True)
+    return tuple(pairs)
+
+
+_M190_ADMISSION_ATOMIC_SORTED = _m190_sorted_atomic_pairs()
+
+
+def admission_named_leaf_condition_key(mc: str, domain_dm: str, original_text: str) -> str | None:
+    if domain_dm != "admission" or mc.strip().upper() != "M190":
+        return None
+    key = normalized_admission_headline(original_text)
+    for phrase, ck in _M190_ADMISSION_ATOMIC_SORTED:
+        if phrase in key:
+            return ck
+    return None
+
+
+def admission_named_composite_condition_key(mc: str, domain_dm: str, original_text: str, inferred_op: str) -> str | None:
+    if domain_dm != "admission" or mc.strip().upper() != "M190":
+        return None
+    if inferred_op != "AND":
+        return None
+    key = normalized_admission_headline(original_text)
+    if "pulmonary edema" in key and "all of the following" in key:
+        return "pulmonary_edema_with_oxygen_need_and_observation_failure_condition_present"
+    return None
 
 
 class Idx:
@@ -263,6 +315,10 @@ def emit_source_logic(ix: Idx, F: Forge, root_sid: str, root_logic_id: str, id_p
         mc = F.r.mc
         if not ch:
             ck = leaf_condition_key(mc, sid)
+            if F.dm == "admission":
+                named_ck = admission_named_leaf_condition_key(mc, F.dm, ot)
+                if named_ck:
+                    ck = named_ck
             strict_leaf = False if inherited_xo else True
             return F.A(
                 my_id,
@@ -288,11 +344,14 @@ def emit_source_logic(ix: Idx, F: Forge, root_sid: str, root_logic_id: str, id_p
         child_xo = inherited_xo or composite_xo
         kid_ids = [walk(c["source_node_id"], child_xo, None) for c in ch]
         strict_comp = False if composite_xo else True
+        composite_ck = None
+        if F.dm == "admission":
+            composite_ck = admission_named_composite_condition_key(mc, F.dm, ot, str(op or ""))
         return F.C(
             my_id,
             None,
             op,
-            None,
+            composite_ck,
             ot,
             "evaluate_children",
             strict_comp,
@@ -440,15 +499,19 @@ def render_md(dom: list[dict], lg: list[dict]) -> str:
 
     m.append("- [OR] Admission is indicated for 1 or more of the following")
 
-    for pid in ("M083.admission.acute_ischemic_stroke_neurologic_findings", "M083.admission.acute_ischemic_stroke_clinical_need_monitoring", "M083.admission.thrombolysis_or_thrombectomy_performed_or_planned"):
-
-        dn = next(d for d in dom if d["node_id"] == pid)
-
-        rid = dn["logic_root_id"]
-
-        m.append("  - Path: " + dn["original_text"])
-
-        m.extend(["    " + x for x in wl(rid, "")])
+    paths = [
+        d
+        for d in dom
+        if d.get("node_type") == "admission_path" and str(d.get("domain") or "") == "admission"
+    ]
+    paths.sort(key=lambda d: int(d.get("sort_order") or 0))
+    for dn in paths:
+        rid = dn.get("logic_root_id")
+        if not rid or rid not in ix:
+            continue
+        otxt = strip_txt(str(dn.get("original_text") or dn.get("description") or ""))
+        m.append("  - Path: " + otxt)
+        m.extend(["    " + x for x in wl(str(rid), "")])
 
     m += ["", "## Discharge", "", "- [CHECKLIST] Discharge planning includes"]
 
@@ -463,6 +526,300 @@ def render_md(dom: list[dict], lg: list[dict]) -> str:
     m += ["  " + x for x in wl(dst["logic_root_id"], "")]
 
     return "\n".join(m).rstrip() + "\n"
+
+
+def _discover_generic_admission_path_sources(ix: Idx, mc: str) -> list[str]:
+    """Admission paths = list items under the primary 'Admission is indicated…' header only.
+
+    Extended stay, ORC / length-of-stay, hospitalization milestones, complications, and discharge
+    bullets are parsed under other sections and must not be promoted to admission paths here.
+    """
+    nodes = list(ix.by.values())
+    sec = f"{mc}.section.admission"
+
+    def roots(section_id: str) -> list[dict]:
+        return sorted(
+            [n for n in nodes if n.get("section_id") == section_id and not n.get("parent_source_node_id")],
+            key=lambda x: int(x.get("sort_order") or 0),
+        )
+
+    def _skip_li_text(text: str) -> bool:
+        tl = str(text).casefold()
+        noise_substr = (
+            "not usually used",
+            "extended stay",
+            "goal length of stay",
+            "discharge planning includes",
+            "post-hospital levels",
+            "optimal recovery course",
+            "failure to meet discharge",
+        )
+        return any(s in tl for s in noise_substr)
+
+    out: list[str] = []
+    admission_roots = roots(sec)
+    primary: dict | None = None
+    for r in admission_roots:
+        t = str(r.get("original_text") or "")
+        tl = t.casefold()
+        if "admission is indicated" in tl and ("1 or more" in tl or "following" in tl):
+            primary = r
+            break
+    if primary is None and admission_roots:
+        primary = admission_roots[0]
+    if primary is not None:
+        for ch in ix.C(primary["source_node_id"]):
+            otxt = str(ch.get("original_text") or "")
+            if _skip_li_text(otxt):
+                continue
+            out.append(str(ch["source_node_id"]))
+
+    seen: set[str] = set()
+    deduped: list[str] = []
+    for sid in out:
+        if sid not in seen:
+            seen.add(sid)
+            deduped.append(sid)
+    return deduped
+
+
+def build_domain_rule_tree_generic(ix: Idx, mc: str, ttl: str) -> tuple[list[dict], list[dict], Refs]:
+    """Generic template: true admission paths from the primary indication list only; discharge from planning/destination sections."""
+    Forge._sort_seq = 0
+    rs = Refs(mc)
+    dom: list[dict] = []
+    lg: list[dict] = []
+
+    rn = sorted(ix.C(None), key=lambda z: z["sort_order"])[0]
+    bx: dict[str, Any] = {}
+    rs.tag(bx, ix, None, [rn["source_node_id"]])
+    dom.append(
+        dict(
+            node_id="MCG",
+            level=0,
+            node_type="guideline_library_root",
+            name="MCG Guideline Library",
+            mcg_code=None,
+            mcg_title=None,
+            domain=None,
+            parent_node_id=None,
+            child_node_ids=[mc],
+            sort_order=1,
+            description="MCG Guideline Library",
+            original_text="",
+            normalized_text="",
+            evaluation_mode="evaluate_children",
+            logic_operator=None,
+            logic_basis=None,
+            logic_root_id=None,
+            source_node_ids=bx["source_node_ids"],
+            source_ref_ids=bx["source_ref_ids"],
+            review_status="auto_extracted",
+            warnings=[],
+        )
+    )
+
+    asn_candidates = sorted(
+        [n for n in ix.by.values() if n.get("section_id") == f"{mc}.section.admission" and not n.get("parent_source_node_id")],
+        key=lambda z: int(z["sort_order"] or 0),
+    )
+    asn = str(asn_candidates[0]["source_node_id"]) if asn_candidates else ""
+
+    dn1 = dict(
+        node_id=mc,
+        level=1,
+        node_type="guideline",
+        mcg_code=mc,
+        mcg_title=ttl,
+        domain=None,
+        parent_node_id="MCG",
+        child_node_ids=[f"{mc}.admission", f"{mc}.discharge"],
+        sort_order=2,
+        description=ttl,
+        original_text=strip_txt(ix[asn]["original_text"]) if asn else ttl,
+        normalized_text=strip_txt(ix[asn]["original_text"]) if asn else ttl,
+        evaluation_mode="evaluate_children",
+        logic_operator=None,
+        logic_basis=None,
+        logic_root_id=None,
+        review_status="auto_extracted",
+        warnings=[],
+    )
+    if asn:
+        rs.tag(dn1, ix, None, [asn])
+
+    lh_ad = ix[asn].get("logic_hint") if asn else None
+    dn_ad = dict(
+        node_id=f"{mc}.admission",
+        level=2,
+        node_type="guideline_domain_root",
+        mcg_code=mc,
+        mcg_title=ttl,
+        domain="admission",
+        parent_node_id=mc,
+        child_node_ids=[],
+        sort_order=3,
+        description="Clinical Indications for Admission to Inpatient Care",
+        original_text=strip_txt(ix[asn]["original_text"]) if asn else "",
+        normalized_text=strip_txt(ix[asn]["original_text"]) if asn else "",
+        evaluation_mode="evaluate_children",
+        logic_operator="OR",
+        logic_basis=(
+            dict(raw_phrase=lh_ad["raw_phrase"], confidence=lh_ad["confidence"])
+            if isinstance(lh_ad, dict) and lh_ad.get("raw_phrase") is not None
+            else {"raw_phrase": "Admission", "confidence": "high"}
+        ),
+        logic_root_id=None,
+        review_status="auto_extracted",
+        warnings=[],
+    )
+    if asn:
+        rs.tag(dn_ad, ix, "admission", [asn])
+
+    dp1_candidates = sorted(
+        [
+            n
+            for n in ix.by.values()
+            if n.get("section_id") == f"{mc}.section.discharge_planning" and not n.get("parent_source_node_id")
+        ],
+        key=lambda z: int(z["sort_order"] or 0),
+    )
+    ds1_candidates = sorted(
+        [
+            n
+            for n in ix.by.values()
+            if n.get("section_id") == f"{mc}.section.discharge_destination" and not n.get("parent_source_node_id")
+        ],
+        key=lambda z: int(z["sort_order"] or 0),
+    )
+    dp1 = str(dp1_candidates[0]["source_node_id"]) if dp1_candidates else ""
+    ds1 = str(ds1_candidates[0]["source_node_id"]) if ds1_candidates else ""
+
+    dn_dis = dict(
+        node_id=f"{mc}.discharge",
+        level=2,
+        node_type="guideline_domain_root",
+        mcg_code=mc,
+        mcg_title=ttl,
+        domain="discharge",
+        parent_node_id=mc,
+        child_node_ids=[f"{mc}.discharge.planning", f"{mc}.discharge.destination"],
+        sort_order=4,
+        description="Discharge",
+        original_text="",
+        normalized_text="",
+        evaluation_mode="checklist_support",
+        logic_operator="CHECKLIST",
+        logic_basis={"raw_phrase": "Discharge", "confidence": "high"},
+        logic_root_id=None,
+        review_status="auto_extracted",
+        warnings=[],
+    )
+    if dp1:
+        rs.tag(dn_dis, ix, "discharge", [dp1])
+
+    lr_plan = f"logic.{mc}.discharge.planning.root"
+    lr_dst = f"logic.{mc}.discharge.destination.root"
+
+    dn_pl = dict(
+        node_id=f"{mc}.discharge.planning",
+        level=3,
+        node_type="discharge_planning_section",
+        mcg_code=mc,
+        mcg_title=ttl,
+        domain="discharge",
+        parent_node_id=f"{mc}.discharge",
+        child_node_ids=[],
+        sort_order=5,
+        description="Discharge planning includes",
+        original_text="Discharge planning includes",
+        normalized_text="Discharge planning includes",
+        evaluation_mode="evaluate_rule_logic",
+        logic_operator=None,
+        logic_basis=None,
+        logic_root_id=lr_plan,
+        review_status="auto_extracted",
+        warnings=[],
+    )
+    if dp1:
+        rs.tag(dn_pl, ix, "discharge", [dp1])
+
+    dn_dst = dict(
+        node_id=f"{mc}.discharge.destination",
+        level=3,
+        node_type="discharge_destination_section",
+        mcg_code=mc,
+        mcg_title=ttl,
+        domain="discharge",
+        parent_node_id=f"{mc}.discharge",
+        child_node_ids=[],
+        sort_order=6,
+        description="Discharge Destination",
+        original_text="Post-hospital levels of admission may include",
+        normalized_text="Post-hospital levels of admission may include",
+        evaluation_mode="evaluate_rule_logic",
+        logic_operator=None,
+        logic_basis=None,
+        logic_root_id=lr_dst,
+        review_status="auto_extracted",
+        warnings=[],
+    )
+    if ds1:
+        rs.tag(dn_dst, ix, "discharge", [ds1])
+
+    dom.extend([dn1, dn_ad, dn_dis, dn_pl, dn_dst])
+
+    path_sources = _discover_generic_admission_path_sources(ix, mc)
+    if not path_sources:
+        raise SystemExit(f"generic domain build: no admission path sources for {mc}")
+
+    admission_child_ids: list[str] = []
+    for i, sid in enumerate(path_sources):
+        pn = ix[sid]
+        path_nid = f"{mc}.admission.p{i + 1:02d}"
+        lr = f"logic.{mc}.p{i + 1}.root"
+        admission_child_ids.append(path_nid)
+        otxt = strip_txt(str(pn.get("original_text") or ""))
+        dnp = dict(
+            node_id=path_nid,
+            level=3,
+            node_type="admission_path",
+            mcg_code=mc,
+            mcg_title=ttl,
+            domain="admission",
+            parent_node_id=f"{mc}.admission",
+            child_node_ids=[],
+            sort_order=10 + i,
+            description=otxt[:96],
+            original_text=otxt,
+            normalized_text=otxt,
+            evaluation_mode="evaluate_rule_logic",
+            logic_operator=None,
+            logic_basis=None,
+            logic_root_id=lr,
+            review_status="auto_extracted",
+            warnings=[],
+        )
+        rs.tag(dnp, ix, "admission", [sid])
+        dom.append(dnp)
+        emit_source_logic(
+            ix,
+            Forge(lg, rs, ix, path_nid, "admission"),
+            sid,
+            lr,
+            f"log.{mc}.path{i + 1}",
+        )
+
+    dn_ad["child_node_ids"] = admission_child_ids
+
+    if dp1:
+        emit_source_logic(ix, Forge(lg, rs, ix, f"{mc}.discharge.planning", "discharge"), dp1, lr_plan, f"log.{mc}.dplan")
+    if ds1:
+        emit_source_logic(ix, Forge(lg, rs, ix, f"{mc}.discharge.destination", "discharge"), ds1, lr_dst, f"log.{mc}.ddst")
+
+    wire(lg)
+
+    return dom, lg, rs
 
 
 def build_m083(ix: Idx, ttl: str) -> tuple[list[dict], list[dict], Refs]:
@@ -1095,10 +1452,10 @@ def main() -> None:
 
     ix = Idx(doc["source_nodes"])
 
-    if mcg != "M083":
-
-        raise SystemExit(f"unsupported mcg_code {mcg}")
-    dom, lg, rs = build_m083(ix, ttl)
+    if mcg == "M083":
+        dom, lg, rs = build_m083(ix, ttl)
+    else:
+        dom, lg, rs = build_domain_rule_tree_generic(ix, mcg, ttl)
     out = Pth(args.out_dir)
 
     out.mkdir(parents=True, exist_ok=True)

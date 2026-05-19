@@ -1,0 +1,33 @@
+{
+  "mcg_code": "M190",
+  "condition_count": 19,
+  "atomic_rule_count": 91,
+  "composite_count": 33,
+  "hemodynamic_instability_found": true,
+  "tachycardia_definition_found": true,
+  "tachycardia_adult_hr_gt_100_found": true,
+  "hypotension_definition_found": true,
+  "orthostatic_hypotension_definition_found": true,
+  "altered_mental_status_definition_found": true,
+  "hemodynamic_persistent_tachycardia_is_composite": true,
+  "hemodynamic_persistent_hypotension_is_composite": true,
+  "hemodynamic_persistent_orthostatic_hypotension_is_composite": true,
+  "adult_sbp_lt_80_found": true,
+  "adult_shock_index_gt_1_found": true,
+  "adult_map_lt_65_found": true,
+  "vasopressor_or_inotrope_required_found": true,
+  "lactate_gte_2_found": true,
+  "ph_lt_7_35_found": true,
+  "pediatric_rules_marked_needs_review": true,
+  "missing_required_rules": [],
+  "dangling_child_refs": [],
+  "one_child_composites": [
+    "comp.dyspnea_persistent_placeholder.root",
+    "comp.m190 verbatim.75fecdcfed3e65",
+    "comp.m190 verbatim.a7fe7d0528398c",
+    "comp.m190 verbatim.db2927ca9dc33f",
+    "comp.m190 verbatim.eb27736c36bed4",
+    "comp.m190 verbatim.fb1f0682700ae2"
+  ],
+  "warnings": []
+}

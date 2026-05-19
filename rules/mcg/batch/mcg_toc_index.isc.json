@@ -1,0 +1,1186 @@
+{
+  "meta": {
+    "toc_pages_visited": 91,
+    "candidate_links_raw": 1373,
+    "guideline_pages_opened": 200,
+    "unique_mcodes": 65,
+    "total_navigations": 291,
+    "max_toc_pages": 120,
+    "max_guideline_pages": 200,
+    "product": "ISC",
+    "start_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines",
+    "toc_queue_remaining": 0
+  },
+  "guidelines": [
+    {
+      "mcg_code": "M000",
+      "mcg_original_code": "M0",
+      "title": "Mastectomy, Complete, with Tissue Flap Reconstruction",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0770250a.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=General%20Surgery",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": false
+      },
+      "category_path": null,
+      "link_text": "Mastectomy, Complete, with Tissue Flap Reconstruction",
+      "page_title": "ISC - Mastectomy, Complete, with Tissue Flap Reconstruction"
+    },
+    {
+      "mcg_code": "M002",
+      "mcg_original_code": "m2",
+      "title": "Aortic Aneurysm, Thoracic, Repair with Graft",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0418100a.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiovascular%20Surgery",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": false
+      },
+      "category_path": null,
+      "link_text": "Aortic Aneurysm, Thoracic, Repair with Graft",
+      "page_title": "ISC - Aortic Aneurysm, Thoracic, Repair with Graft"
+    },
+    {
+      "mcg_code": "M005",
+      "mcg_original_code": "M-05",
+      "title": "Abdominal Pain",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1408010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Abdominal Pain",
+      "page_title": "ISC - Abdominal Pain"
+    },
+    {
+      "mcg_code": "M035",
+      "mcg_original_code": "M-35",
+      "title": "Anemia",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0764010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Hematology%20-%20Oncology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Anemia",
+      "page_title": "ISC - Anemia"
+    },
+    {
+      "mcg_code": "M040",
+      "mcg_original_code": "M-40",
+      "title": "Angina",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0428100b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Angina",
+      "page_title": "ISC - Angina"
+    },
+    {
+      "mcg_code": "M052",
+      "mcg_original_code": "M-52",
+      "title": "Percutaneous Coronary Intervention",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0428610b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Percutaneous Coronary Intervention",
+      "page_title": "ISC - Percutaneous Coronary Intervention"
+    },
+    {
+      "mcg_code": "M070",
+      "mcg_original_code": "M-70",
+      "title": "Cellulitis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1701060b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Infectious%20Disease",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Cellulitis",
+      "page_title": "ISC - Cellulitis"
+    },
+    {
+      "mcg_code": "M078",
+      "mcg_original_code": "M-78",
+      "title": "Traumatic Brain Injury, Nonsurgical Treatment",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202630b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Traumatic Brain Injury, Nonsurgical Treatment",
+      "page_title": "ISC - Traumatic Brain Injury, Nonsurgical Treatment"
+    },
+    {
+      "mcg_code": "M079",
+      "mcg_original_code": "M-79",
+      "title": "Subarachnoid Hemorrhage, Nonsurgical Treatment",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0224350b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Subarachnoid Hemorrhage, Nonsurgical Treatment",
+      "page_title": "ISC - Subarachnoid Hemorrhage, Nonsurgical Treatment"
+    },
+    {
+      "mcg_code": "M083",
+      "mcg_original_code": "M-83",
+      "title": "Stroke: Ischemic",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0224500b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Stroke: Ischemic",
+      "page_title": "ISC - Stroke: Ischemic"
+    },
+    {
+      "mcg_code": "M085",
+      "mcg_original_code": "M-85",
+      "title": "Stroke: Hemorrhagic",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0224600b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Stroke: Hemorrhagic",
+      "page_title": "ISC - Stroke: Hemorrhagic"
+    },
+    {
+      "mcg_code": "M087",
+      "mcg_original_code": "M-87",
+      "title": "Chemotherapy",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0770350b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Hematology%20-%20Oncology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Chemotherapy",
+      "page_title": "ISC - Chemotherapy"
+    },
+    {
+      "mcg_code": "M089",
+      "mcg_original_code": "M-89",
+      "title": "Chest Pain",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0408020b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Chest Pain",
+      "page_title": "ISC - Chest Pain"
+    },
+    {
+      "mcg_code": "M123",
+      "mcg_original_code": "M-123",
+      "title": "Dehydration",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1408200b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Dehydration",
+      "page_title": "ISC - Dehydration"
+    },
+    {
+      "mcg_code": "M130",
+      "mcg_original_code": "M-130",
+      "title": "Diabetes",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0952010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Endocrinology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Diabetes",
+      "page_title": "ISC - Diabetes"
+    },
+    {
+      "mcg_code": "M134",
+      "mcg_original_code": "M-134",
+      "title": "Diabetes, Hypoglycemia",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0952250b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Endocrinology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Diabetes, Hypoglycemia",
+      "page_title": "ISC - Diabetes, Hypoglycemia"
+    },
+    {
+      "mcg_code": "M150",
+      "mcg_original_code": "M-150",
+      "title": "Diverticulitis, Acute",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1407500b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Diverticulitis, Acute",
+      "page_title": "ISC - Diverticulitis, Acute"
+    },
+    {
+      "mcg_code": "M152",
+      "mcg_original_code": "M-152",
+      "title": "Dizziness",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0631200b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Dizziness",
+      "page_title": "ISC - Dizziness"
+    },
+    {
+      "mcg_code": "M153",
+      "mcg_original_code": "M-153",
+      "title": "Drug Ingestion or Overdose",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1673010m.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Drug Ingestion or Overdose",
+      "page_title": "ISC - Drug Ingestion or Overdose"
+    },
+    {
+      "mcg_code": "M154",
+      "mcg_original_code": "M-154",
+      "title": "Cardiac Catheter Ablation",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0466150b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Cardiac Catheter Ablation",
+      "page_title": "ISC - Cardiac Catheter Ablation"
+    },
+    {
+      "mcg_code": "M157",
+      "mcg_original_code": "M-157",
+      "title": "Cardioverter-Defibrillator Insertion",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0466170b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Cardioverter-Defibrillator Insertion",
+      "page_title": "ISC - Cardioverter-Defibrillator Insertion"
+    },
+    {
+      "mcg_code": "M160",
+      "mcg_original_code": "M-160",
+      "title": "Sepsis and Other Febrile Illness, without Focal Infection",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0838010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Infectious%20Disease",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Sepsis and Other Febrile Illness, without Focal Infection",
+      "page_title": "ISC - Sepsis and Other Febrile Illness, without Focal Infection"
+    },
+    {
+      "mcg_code": "M170",
+      "mcg_original_code": "M-170",
+      "title": "Gastroenteritis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1406550b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Gastroenteritis",
+      "page_title": "ISC - Gastroenteritis"
+    },
+    {
+      "mcg_code": "M180",
+      "mcg_original_code": "M-180",
+      "title": "Gastrointestinal Bleeding, Upper",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1406020b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Gastrointestinal Bleeding, Upper",
+      "page_title": "ISC - Gastrointestinal Bleeding, Upper"
+    },
+    {
+      "mcg_code": "M182",
+      "mcg_original_code": "M-182",
+      "title": "Gastrointestinal Bleeding, Lower",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1407950b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Gastrointestinal Bleeding, Lower",
+      "page_title": "ISC - Gastrointestinal Bleeding, Lower"
+    },
+    {
+      "mcg_code": "M185",
+      "mcg_original_code": "M-185",
+      "title": "Headache",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Headache",
+      "page_title": "ISC - Headache"
+    },
+    {
+      "mcg_code": "M190",
+      "mcg_original_code": "M-190",
+      "title": "Heart Failure",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0445010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Heart Failure",
+      "page_title": "ISC - Heart Failure"
+    },
+    {
+      "mcg_code": "M197",
+      "mcg_original_code": "M-197",
+      "title": "Hypertension",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0422010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Hypertension",
+      "page_title": "ISC - Hypertension"
+    },
+    {
+      "mcg_code": "M200",
+      "mcg_original_code": "M-200",
+      "title": "Ileus",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1407110b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Ileus",
+      "page_title": "ISC - Ileus"
+    },
+    {
+      "mcg_code": "M210",
+      "mcg_original_code": "M-210",
+      "title": "Intestinal Obstruction",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1407100b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Intestinal Obstruction",
+      "page_title": "ISC - Intestinal Obstruction"
+    },
+    {
+      "mcg_code": "M221",
+      "mcg_original_code": "M-221",
+      "title": "Meningitis, Suspected or Viral",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202220b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Meningitis, Suspected or Viral",
+      "page_title": "ISC - Meningitis, Suspected or Viral"
+    },
+    {
+      "mcg_code": "M222",
+      "mcg_original_code": "M-222",
+      "title": "Meningitis, Bacterial",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202230b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Meningitis, Bacterial",
+      "page_title": "ISC - Meningitis, Bacterial"
+    },
+    {
+      "mcg_code": "M230",
+      "mcg_original_code": "M-230",
+      "title": "Myocardial Infarction",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0428150b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Myocardial Infarction",
+      "page_title": "ISC - Myocardial Infarction"
+    },
+    {
+      "mcg_code": "M240",
+      "mcg_original_code": "M-240",
+      "title": "Myocarditis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0445550b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Myocarditis",
+      "page_title": "ISC - Myocarditis"
+    },
+    {
+      "mcg_code": "M250",
+      "mcg_original_code": "M-250",
+      "title": "Pancreatitis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1453010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Pancreatitis",
+      "page_title": "ISC - Pancreatitis"
+    },
+    {
+      "mcg_code": "M251",
+      "mcg_original_code": "M-251",
+      "title": "Pancreatitis, with Common Duct Stone",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1453100b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Pancreatitis, with Common Duct Stone",
+      "page_title": "ISC - Pancreatitis, with Common Duct Stone"
+    },
+    {
+      "mcg_code": "M255",
+      "mcg_original_code": "M-255",
+      "title": "Paraplegia, Acute",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202540b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Paraplegia, Acute",
+      "page_title": "ISC - Paraplegia, Acute"
+    },
+    {
+      "mcg_code": "M270",
+      "mcg_original_code": "M-270",
+      "title": "Pericarditis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0456010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Pericarditis",
+      "page_title": "ISC - Pericarditis"
+    },
+    {
+      "mcg_code": "M305",
+      "mcg_original_code": "M-305",
+      "title": "Tetraplegia, Acute",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202550b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Tetraplegia, Acute",
+      "page_title": "ISC - Tetraplegia, Acute"
+    },
+    {
+      "mcg_code": "M310",
+      "mcg_original_code": "M-310",
+      "title": "Endovascular Intervention, Renal Artery or Renal Vein",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0457040b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Nephrology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Endovascular Intervention, Renal Artery or Renal Vein",
+      "page_title": "ISC - Endovascular Intervention, Renal Artery or Renal Vein"
+    },
+    {
+      "mcg_code": "M320",
+      "mcg_original_code": "M-320",
+      "title": "Renal Colic and Kidney Stones",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1304100b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Nephrology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Renal Colic and Kidney Stones",
+      "page_title": "ISC - Renal Colic and Kidney Stones"
+    },
+    {
+      "mcg_code": "M325",
+      "mcg_original_code": "M-325",
+      "title": "Renal Failure, Chronic",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1304220b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Nephrology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Renal Failure, Chronic",
+      "page_title": "ISC - Renal Failure, Chronic"
+    },
+    {
+      "mcg_code": "M326",
+      "mcg_original_code": "M-326",
+      "title": "Renal Failure, Acute",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1304200b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Nephrology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Renal Failure, Acute",
+      "page_title": "ISC - Renal Failure, Acute"
+    },
+    {
+      "mcg_code": "M327",
+      "mcg_original_code": "M-327",
+      "title": "Seizure",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0202100b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Seizure",
+      "page_title": "ISC - Seizure"
+    },
+    {
+      "mcg_code": "M331",
+      "mcg_original_code": "M-331",
+      "title": "Sickle Cell Disease",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0764300b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Hematology%20-%20Oncology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Sickle Cell Disease",
+      "page_title": "ISC - Sickle Cell Disease"
+    },
+    {
+      "mcg_code": "M333",
+      "mcg_original_code": "M-333",
+      "title": "Left Atrial Appendage Closure, Percutaneous",
+      "url": "https://careweb.careguidelines.com/ed30/isc/isc_05096.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Left Atrial Appendage Closure, Percutaneous",
+      "page_title": "ISC - Left Atrial Appendage Closure, Percutaneous"
+    },
+    {
+      "mcg_code": "M334",
+      "mcg_original_code": "M-334",
+      "title": "Infective Endocarditis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0405060b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Infective Endocarditis",
+      "page_title": "ISC - Infective Endocarditis"
+    },
+    {
+      "mcg_code": "M340",
+      "mcg_original_code": "M-340",
+      "title": "Syncope",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0466200b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Syncope",
+      "page_title": "ISC - Syncope"
+    },
+    {
+      "mcg_code": "M360",
+      "mcg_original_code": "M-360",
+      "title": "Transient Ischemic Attack (TIA)",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0224300b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Transient Ischemic Attack (TIA)",
+      "page_title": "ISC - Transient Ischemic Attack (TIA)"
+    },
+    {
+      "mcg_code": "M370",
+      "mcg_original_code": "M-370",
+      "title": "Vomiting",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1406100b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Vomiting",
+      "page_title": "ISC - Vomiting"
+    },
+    {
+      "mcg_code": "M505",
+      "mcg_original_code": "M-505",
+      "title": "Atrial Fibrillation",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0466010b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Atrial Fibrillation",
+      "page_title": "ISC - Atrial Fibrillation"
+    },
+    {
+      "mcg_code": "M510",
+      "mcg_original_code": "M-510",
+      "title": "Supraventricular Arrhythmia",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0466300b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Supraventricular Arrhythmia",
+      "page_title": "ISC - Supraventricular Arrhythmia"
+    },
+    {
+      "mcg_code": "M550",
+      "mcg_original_code": "M-550",
+      "title": "Esophageal Disease",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1433289b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Esophageal Disease",
+      "page_title": "ISC - Esophageal Disease"
+    },
+    {
+      "mcg_code": "M555",
+      "mcg_original_code": "M-555",
+      "title": "Gallbladder or Bile Duct Inflammation or Obstruction",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1436360b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Gallbladder or Bile Duct Inflammation or Obstruction",
+      "page_title": "ISC - Gallbladder or Bile Duct Inflammation or Obstruction"
+    },
+    {
+      "mcg_code": "M560",
+      "mcg_original_code": "M-560",
+      "title": "Gastritis and Duodenitis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1433270b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Gastritis and Duodenitis",
+      "page_title": "ISC - Gastritis and Duodenitis"
+    },
+    {
+      "mcg_code": "M565",
+      "mcg_original_code": "M-565",
+      "title": "Inflammatory Bowel Disease",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1407610b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Inflammatory Bowel Disease",
+      "page_title": "ISC - Inflammatory Bowel Disease"
+    },
+    {
+      "mcg_code": "M570",
+      "mcg_original_code": "M-570",
+      "title": "Liver Disease",
+      "url": "https://careweb.careguidelines.com/ed30/isc/1441160b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Gastroenterology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Liver Disease",
+      "page_title": "ISC - Liver Disease"
+    },
+    {
+      "mcg_code": "M575",
+      "mcg_original_code": "M-575",
+      "title": "Ventricular Arrhythmia",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0445590b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Cardiology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Ventricular Arrhythmia",
+      "page_title": "ISC - Ventricular Arrhythmia"
+    },
+    {
+      "mcg_code": "M580",
+      "mcg_original_code": "M-580",
+      "title": "EEG, Video Monitoring",
+      "url": "https://careweb.careguidelines.com/ed30/isc/ac02_039.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Neurology",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "EEG, Video Monitoring",
+      "page_title": "ISC - EEG, Video Monitoring"
+    },
+    {
+      "mcg_code": "M585",
+      "mcg_original_code": "M-585",
+      "title": "Anorexia Nervosa, Adult",
+      "url": "https://careweb.careguidelines.com/ed30/isc/isc_1606.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Behavioral%20Health",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Anorexia Nervosa, Adult",
+      "page_title": "ISC - Anorexia Nervosa, Adult"
+    },
+    {
+      "mcg_code": "M590",
+      "mcg_original_code": "M-590",
+      "title": "Delirium",
+      "url": "https://careweb.careguidelines.com/ed30/isc/isc_1604.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Behavioral%20Health",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Delirium",
+      "page_title": "ISC - Delirium"
+    },
+    {
+      "mcg_code": "M595",
+      "mcg_original_code": "M-595",
+      "title": "Substance-Related Disorders, Adult",
+      "url": "https://careweb.careguidelines.com/ed30/isc/isc_1605.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Behavioral%20Health",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Substance-Related Disorders, Adult",
+      "page_title": "ISC - Substance-Related Disorders, Adult"
+    },
+    {
+      "mcg_code": "M600",
+      "mcg_original_code": "M-600",
+      "title": "Osteomyelitis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0100430b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Infectious%20Disease",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Osteomyelitis",
+      "page_title": "ISC - Osteomyelitis"
+    },
+    {
+      "mcg_code": "M605",
+      "mcg_original_code": "M-605",
+      "title": "Septic Arthritis",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0100440b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Infectious%20Disease",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Septic Arthritis",
+      "page_title": "ISC - Septic Arthritis"
+    },
+    {
+      "mcg_code": "M610",
+      "mcg_original_code": "M-610",
+      "title": "Venom Exposure from Bite or Sting",
+      "url": "https://careweb.careguidelines.com/ed30/isc/0100450b.htm",
+      "confidence": "high",
+      "evidence": {
+        "found_code_in": "page_body",
+        "found_title_in": "h1",
+        "source_toc_url": "https://careweb.careguidelines.com/ed30/scripts/toc.pl?product=isc&rootPath=Optimal%20Recovery%20Guidelines&rootPath=Infectious%20Disease",
+        "body_org_hit": true,
+        "body_clinical_indications_hit": true,
+        "body_org_near_mcode": true
+      },
+      "category_path": null,
+      "link_text": "Venom Exposure from Bite or Sting",
+      "page_title": "ISC - Venom Exposure from Bite or Sting"
+    }
+  ]
+}

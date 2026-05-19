@@ -1,0 +1,3292 @@
+{
+  "audit": {
+    "admission_path_2_has_hemodynamic_link": false,
+    "admission_unlinked_condition_ref_count": 2,
+    "admission_unlinked_details": [
+      {
+        "condition_key": "leaf_m190_9efb819860096e4e",
+        "domain_node_id": "M190.admission.p07",
+        "logic_node_id": "log.M190.path7.1"
+      },
+      {
+        "condition_key": "leaf_m190_27e5d3655fec392a",
+        "domain_node_id": "M190.admission.p07",
+        "logic_node_id": "log.M190.path7.2"
+      }
+    ],
+    "dangling_shared_definition_refs": [
+      "altered_mental_status_condition_present",
+      "hypotension_condition_present",
+      "hypoxemia_condition_present",
+      "orthostatic_hypotension_condition_present",
+      "respiratory_abnormality_condition_present",
+      "tachycardia_condition_present"
+    ],
+    "domain_logic_node_count": 98,
+    "hemodynamic_instability_linked": true,
+    "hemodynamic_instability_logic_node_id": "logic.M190.p1.root",
+    "hemodynamic_instability_root_composite_id": "comp.hemodynamic_instability.root",
+    "linked_condition_keys": [
+      "acute_myocardial_ischemia_with_heart_failure_admission_condition_present",
+      "acute_renal_insufficiency_evidence_gt_50pct_egfr_reduction_from_baseline_condition_present",
+      "altered_mental_status_severe_or_persistent_condition_present",
+      "cardiac_arrhythmia_of_immediate_concern_condition_present",
+      "hemodynamic_instability_condition_present",
+      "persistent_dyspnea_above_baseline_despite_observation_care_condition_present",
+      "persistent_tachypnea_despite_observation_care_condition_present",
+      "progressive_renal_insufficiency_evidence_gt_25pct_egfr_reduction_condition_present",
+      "pulmonary_artery_catheter_monitoring_needed_condition_present",
+      "pulmonary_edema_with_oxygen_need_and_observation_failure_condition_present",
+      "severe_anasarca_or_peripheral_edema_condition_present",
+      "severe_electrolyte_abnormality_requiring_inpatient_care_condition_present",
+      "very_severe_pulmonary_edema_condition_present"
+    ],
+    "linked_condition_ref_count": 13,
+    "linked_shared_atomic_definition_ref_count": 0,
+    "linked_shared_definition_ref_count": 13,
+    "mcg_code": "M190",
+    "shared_condition_count": 19,
+    "unlinked_condition_keys": [
+      "leaf_m190_027616981c0a2176",
+      "leaf_m190_13e9f47f92112a2e",
+      "leaf_m190_1a045269ec0e95d2",
+      "leaf_m190_1da47a57bd1287a5",
+      "leaf_m190_2747153c99c4cadb",
+      "leaf_m190_27e5d3655fec392a",
+      "leaf_m190_291641275a8ec331",
+      "leaf_m190_292bfe0c6f25626a",
+      "leaf_m190_29b30a56675c4eeb",
+      "leaf_m190_2e597b3c84c5d8aa",
+      "leaf_m190_37ded66410b9898d",
+      "leaf_m190_3874c684aba507e9",
+      "leaf_m190_409aaf63a315b9b0",
+      "leaf_m190_41b7f5e81fe4807b",
+      "leaf_m190_472800e932382808",
+      "leaf_m190_4b2114703ffdb975",
+      "leaf_m190_4ed88bdb4ff2203e",
+      "leaf_m190_514f740362826ec9",
+      "leaf_m190_53431d91506d0e24",
+      "leaf_m190_5a7a51adebe0d0ac",
+      "leaf_m190_5d86f49c0a6c0be8",
+      "leaf_m190_60a16ec7ef92f490",
+      "leaf_m190_67247a9856e7573c",
+      "leaf_m190_6abd192c8b2e0559",
+      "leaf_m190_6e742c6d7bd9c58d",
+      "leaf_m190_70ce60c0c8c8d218",
+      "leaf_m190_71a4c8fa3b35941b",
+      "leaf_m190_77bf61ecb1c8f6bd",
+      "leaf_m190_7b38af0f0d3e74ae",
+      "leaf_m190_7d727e79f2d2d361",
+      "leaf_m190_7e7d8622872c838c",
+      "leaf_m190_86bb772a8f64594a",
+      "leaf_m190_8eb72e3ef08c3083",
+      "leaf_m190_901d0b649ea21dba",
+      "leaf_m190_916d077431b92785",
+      "leaf_m190_91cdeee74f94d4c8",
+      "leaf_m190_94389b8025d0b448",
+      "leaf_m190_97cebee68ba7da6c",
+      "leaf_m190_9a3cc4a8c786f581",
+      "leaf_m190_9cceaa61ea702694",
+      "leaf_m190_9efb819860096e4e",
+      "leaf_m190_a7a3298eee6b4063",
+      "leaf_m190_a8523323cf71d054",
+      "leaf_m190_b2c4bc1e0b005abb",
+      "leaf_m190_b532e84f55aa047d",
+      "leaf_m190_b753cba47111a8d1",
+      "leaf_m190_b935ab8b0a39a66e",
+      "leaf_m190_bcc907b15ec67d02",
+      "leaf_m190_c3682455f885a089",
+      "leaf_m190_c8ee48d9b17fc5fe",
+      "leaf_m190_cf229d4f83f0c995",
+      "leaf_m190_d05f3a4a1cec69b9",
+      "leaf_m190_d0b0fc566902b761",
+      "leaf_m190_d46f4ff2b6dfadeb",
+      "leaf_m190_d62a340c381b9ec7",
+      "leaf_m190_d8d4b3d9ecb24006",
+      "leaf_m190_dcb685270158033d",
+      "leaf_m190_df9f6ef3bd09a8e8",
+      "leaf_m190_e7b77f58e7acc234",
+      "leaf_m190_eaa60c4689149326",
+      "leaf_m190_ec4ec62cc2d44058",
+      "leaf_m190_f06f88cc7e04bcca",
+      "leaf_m190_f102abf07440f2f5",
+      "leaf_m190_f227baca0faa5eb7",
+      "leaf_m190_f3fc1a219ba383e7",
+      "leaf_m190_f50c6dc1549c88b3",
+      "leaf_m190_fa7c6751b8eebe59",
+      "leaf_m190_fe5ef25618a521ae",
+      "leaf_m190_ff4ce25f9e5277b5"
+    ],
+    "unlinked_condition_ref_count": 69,
+    "warnings": []
+  },
+  "linked_logic_nodes": [
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_ec4ec62cc2d44058",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.destination",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.ddst.1",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Home.",
+      "operator": "IS_TRUE",
+      "original_text": "Home.",
+      "parent_logic_node_id": "logic.M190.discharge.destination.root",
+      "review_status": "auto_extracted",
+      "sort_order": 94,
+      "source_node_ids": [
+        "M190.source.discharge_destination.001.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.ec4ec62cc2d440"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_2747153c99c4cadb",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.destination",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.ddst.2",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Home healthcare. See Home Care Indications for Admission Section HC in Heart Failure guideline in Home Care.",
+      "operator": "IS_TRUE",
+      "original_text": "Home healthcare. See Home Care Indications for Admission Section HC in Heart Failure guideline in Home Care.",
+      "parent_logic_node_id": "logic.M190.discharge.destination.root",
+      "review_status": "auto_extracted",
+      "sort_order": 95,
+      "source_node_ids": [
+        "M190.source.discharge_destination.001.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.2747153c99c4ca"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_6e742c6d7bd9c58d",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.destination",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.ddst.3",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Recovery facility care. See Recovery Facility Care Indications for Admission Section RFC in Heart Failure guideline in Recovery Facility Care.",
+      "operator": "IS_TRUE",
+      "original_text": "Recovery facility care. See Recovery Facility Care Indications for Admission Section RFC in Heart Failure guideline in Recovery Facility Care.",
+      "parent_logic_node_id": "logic.M190.discharge.destination.root",
+      "review_status": "auto_extracted",
+      "sort_order": 96,
+      "source_node_ids": [
+        "M190.source.discharge_destination.001.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.6e742c6d7bd9c5"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_514f740362826ec9",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.destination",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.ddst.4",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Inpatient rehabilitation facility. See Inpatient Rehabilitation Facility (Acute Rehabilitation) Indications for Admission Section RFC in Inpatient Rehabilitation Facility (Acute Rehabilitation): Cardiac Disorders guideline in Recovery Facility Care.",
+      "operator": "IS_TRUE",
+      "original_text": "Inpatient rehabilitation facility. See Inpatient Rehabilitation Facility (Acute Rehabilitation) Indications for Admission Section RFC in Inpatient Rehabilitation Facility (Acute Rehabilitation): Cardiac Disorders guideline in Recovery Facility Care.",
+      "parent_logic_node_id": "logic.M190.discharge.destination.root",
+      "review_status": "auto_extracted",
+      "sort_order": 97,
+      "source_node_ids": [
+        "M190.source.discharge_destination.001.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.514f740362826e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.2",
+        "log.M190.dplan.3",
+        "log.M190.dplan.4",
+        "log.M190.dplan.5",
+        "log.M190.dplan.6",
+        "log.M190.dplan.7"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.dplan.1",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Assessment of needs and planning for care, including ) )",
+      "operator": "CHECKLIST",
+      "original_text": "Assessment of needs and planning for care, including ( 46 ) ( 47 ):",
+      "parent_logic_node_id": "logic.M190.discharge.planning.root",
+      "review_status": "auto_extracted",
+      "sort_order": 27,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d95e73c4188175"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_13e9f47f92112a2e",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.10",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Nutrition and hydration management ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Nutrition and hydration management ( 52 ) ( 53 )",
+      "parent_logic_node_id": "log.M190.dplan.7",
+      "review_status": "auto_extracted",
+      "sort_order": 23,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.006.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.13e9f47f92112a"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_67247a9856e7573c",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.11",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Ongoing education required )",
+      "operator": "IS_TRUE",
+      "original_text": "Ongoing education required ( 53 )",
+      "parent_logic_node_id": "log.M190.dplan.7",
+      "review_status": "auto_extracted",
+      "sort_order": 24,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.006.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.67247a9856e757"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_291641275a8ec331",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.12",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Psychosocial assessment, management, and referrals )",
+      "operator": "IS_TRUE",
+      "original_text": "Psychosocial assessment, management, and referrals ( 54 )",
+      "parent_logic_node_id": "log.M190.dplan.7",
+      "review_status": "auto_extracted",
+      "sort_order": 25,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.006.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.291641275a8ec3"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.14",
+        "log.M190.dplan.29"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.dplan.13",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Early identification of anticipated discharge destination; options include ) )",
+      "operator": "OPTIONS",
+      "original_text": "Early identification of anticipated discharge destination; options include ( 47 ) ( 55 ):",
+      "parent_logic_node_id": "logic.M190.discharge.planning.root",
+      "review_status": "auto_extracted",
+      "sort_order": 44,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.ad9119811f620c"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.15",
+        "log.M190.dplan.16",
+        "log.M190.dplan.26",
+        "log.M190.dplan.27",
+        "log.M190.dplan.28"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.14",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Home; considerations include",
+      "operator": "CHECKLIST",
+      "original_text": "Home; considerations include:",
+      "parent_logic_node_id": "log.M190.dplan.13",
+      "review_status": "auto_extracted",
+      "sort_order": 42,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.9d6920a7fa92c5"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_d0b0fc566902b761",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.15",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Home safety assessment. See Home Safety Assessment SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "Home safety assessment. See Home Safety Assessment SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.14",
+      "review_status": "auto_extracted",
+      "sort_order": 28,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d0b0fc566902b7"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.17",
+        "log.M190.dplan.18",
+        "log.M190.dplan.19",
+        "log.M190.dplan.20",
+        "log.M190.dplan.21",
+        "log.M190.dplan.22",
+        "log.M190.dplan.23",
+        "log.M190.dplan.24",
+        "log.M190.dplan.25"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "examples include or eg"
+      },
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.16",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Patient safe to go home; examples include ) ) )",
+      "operator": "EXAMPLE_SET",
+      "original_text": "Patient safe to go home; examples include ( 56 ) ( 57 ) ( 58 ):",
+      "parent_logic_node_id": "log.M190.dplan.14",
+      "review_status": "auto_extracted",
+      "sort_order": 38,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.415304e838789f"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_eaa60c4689149326",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.17",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Medical status stable for patient's condition",
+      "operator": "IS_TRUE",
+      "original_text": "Medical status stable for patient's condition",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 29,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.eaa60c46891493"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_dcb685270158033d",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.18",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Functional care can safely be provided with available resources.",
+      "operator": "IS_TRUE",
+      "original_text": "Functional care can safely be provided with available resources.",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 30,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.dcb68527015803"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_d8d4b3d9ecb24006",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.19",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Mental status stable for patient's condition",
+      "operator": "IS_TRUE",
+      "original_text": "Mental status stable for patient's condition",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 31,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d8d4b3d9ecb240"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_1da47a57bd1287a5",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.2",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Develop and modify treatment plan (involving multiple providers) as needed.",
+      "operator": "IS_TRUE",
+      "original_text": "Develop and modify treatment plan (involving multiple providers) as needed.",
+      "parent_logic_node_id": "log.M190.dplan.1",
+      "review_status": "auto_extracted",
+      "sort_order": 16,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.1da47a57bd1287"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_37ded66410b9898d",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.20",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Medication availability confirmed and reconciliation complete",
+      "operator": "IS_TRUE",
+      "original_text": "Medication availability confirmed and reconciliation complete",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 32,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.37ded66410b989"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_7e7d8622872c838c",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.21",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Patient/caregiver education completed with written discharge instructions provided",
+      "operator": "IS_TRUE",
+      "original_text": "Patient/caregiver education completed with written discharge instructions provided",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 33,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.7e7d8622872c83"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_6abd192c8b2e0559",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.22",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Community resources identified and referrals made, as needed",
+      "operator": "IS_TRUE",
+      "original_text": "Community resources identified and referrals made, as needed",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 34,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.6abd192c8b2e05"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_ff4ce25f9e5277b5",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.23",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Home care arranged, if indicated",
+      "operator": "IS_TRUE",
+      "original_text": "Home care arranged, if indicated",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 35,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.007"
+      ],
+      "source_ref_ids": [
+        "sr.M190.ff4ce25f9e5277"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_70ce60c0c8c8d218",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.24",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Necessary medical equipment delivery arranged or available in home, if indicated",
+      "operator": "IS_TRUE",
+      "original_text": "Necessary medical equipment delivery arranged or available in home, if indicated",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 36,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.008"
+      ],
+      "source_ref_ids": [
+        "sr.M190.70ce60c0c8c8d2"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_94389b8025d0b448",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": true,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.25",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Necessary medical supplies ordered, or patient/caregiver can obtain, if indicated",
+      "operator": "IS_TRUE",
+      "original_text": "Necessary medical supplies ordered, or patient/caregiver can obtain, if indicated",
+      "parent_logic_node_id": "log.M190.dplan.16",
+      "review_status": "auto_extracted",
+      "sort_order": 37,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.002.009"
+      ],
+      "source_ref_ids": [
+        "sr.M190.94389b8025d0b4"
+      ],
+      "strict_boolean_evaluation": false,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_7d727e79f2d2d361",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.26",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Access to follow-up care",
+      "operator": "IS_TRUE",
+      "original_text": "Access to follow-up care",
+      "parent_logic_node_id": "log.M190.dplan.14",
+      "review_status": "auto_extracted",
+      "sort_order": 39,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.7d727e79f2d2d3"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_9cceaa61ea702694",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.27",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Self-management ability if appropriate. See Activities of Daily Living (ADL) and Instrumental Activities of Daily Living (IADL) Assessment SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "Self-management ability if appropriate. See Activities of Daily Living (ADL) and Instrumental Activities of Daily Living (IADL) Assessment SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.14",
+      "review_status": "auto_extracted",
+      "sort_order": 40,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.9cceaa61ea7026"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_4b2114703ffdb975",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.28",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Caregiver need, ability, and availability",
+      "operator": "IS_TRUE",
+      "original_text": "Caregiver need, ability, and availability",
+      "parent_logic_node_id": "log.M190.dplan.14",
+      "review_status": "auto_extracted",
+      "sort_order": 41,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.001.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.4b2114703ffdb9"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_fa7c6751b8eebe59",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.29",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Post-acute skilled care or custodial care as indicated. See Discharge Planning Tool SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "Post-acute skilled care or custodial care as indicated. See Discharge Planning Tool SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.13",
+      "review_status": "auto_extracted",
+      "sort_order": 43,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.002.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.fa7c6751b8eebe"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_901d0b649ea21dba",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.3",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Evaluate and address preadmission functioning as needed.",
+      "operator": "IS_TRUE",
+      "original_text": "Evaluate and address preadmission functioning as needed.",
+      "parent_logic_node_id": "log.M190.dplan.1",
+      "review_status": "auto_extracted",
+      "sort_order": 17,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.901d0b649ea21d"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.31",
+        "log.M190.dplan.34",
+        "log.M190.dplan.46",
+        "log.M190.dplan.50",
+        "log.M190.dplan.59",
+        "log.M190.dplan.64",
+        "log.M190.dplan.74"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.dplan.30",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Transitions of care plan complete, including ) ) )",
+      "operator": "CHECKLIST",
+      "original_text": "Transitions of care plan complete, including ( 47 ) ( 55 ) ( 59 ):",
+      "parent_logic_node_id": "logic.M190.discharge.planning.root",
+      "review_status": "auto_extracted",
+      "sort_order": 92,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.0838e07633b9a8"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.32",
+        "log.M190.dplan.33"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.31",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Patient and caregiver education complete.",
+      "operator": "CHECKLIST",
+      "original_text": "Patient and caregiver education complete.",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 47,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.9e952c6959614c"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_53431d91506d0e24",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.32",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "See Teach-Back Tool SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "See Teach-Back Tool SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.31",
+      "review_status": "auto_extracted",
+      "sort_order": 45,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.001.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.53431d91506d0e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_d46f4ff2b6dfadeb",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.33",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "See Heart Failure: Patient Education for Clinicians SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "See Heart Failure: Patient Education for Clinicians SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.31",
+      "review_status": "auto_extracted",
+      "sort_order": 46,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.001.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d46f4ff2b6dfad"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.35",
+        "log.M190.dplan.36",
+        "log.M190.dplan.37",
+        "log.M190.dplan.38",
+        "log.M190.dplan.39",
+        "log.M190.dplan.40",
+        "log.M190.dplan.44",
+        "log.M190.dplan.45"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "includes"
+      },
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.34",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Medication reconciliation completion includes ) )",
+      "operator": "CHECKLIST",
+      "original_text": "Medication reconciliation completion includes ( 51 ) ( 60 ):",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 59,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.c90c6c69ddea0d"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_1a045269ec0e95d2",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.35",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Compare patient's discharge list of medications (prescribed and over-the-counter) against provider's admission or transfer orders.",
+      "operator": "IS_TRUE",
+      "original_text": "Compare patient's discharge list of medications (prescribed and over-the-counter) against provider's admission or transfer orders.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 48,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.1a045269ec0e95"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_91cdeee74f94d4c8",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.36",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Assess each medication for correlation to disease state or medical condition.",
+      "operator": "IS_TRUE",
+      "original_text": "Assess each medication for correlation to disease state or medical condition.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 49,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.91cdeee74f94d4"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_409aaf63a315b9b0",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.37",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Report medication discrepancies to prescribing provider, attending physician, and primary care provider, and ensure accurate medication order is identified.",
+      "operator": "IS_TRUE",
+      "original_text": "Report medication discrepancies to prescribing provider, attending physician, and primary care provider, and ensure accurate medication order is identified.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 50,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.409aaf63a315b9"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_a7a3298eee6b4063",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.38",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Provide reconciled medication list to all treating providers.",
+      "operator": "IS_TRUE",
+      "original_text": "Provide reconciled medication list to all treating providers.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 51,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.a7a3298eee6b40"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_292bfe0c6f25626a",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.39",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Confirm that patient or caregiver can acquire medication.",
+      "operator": "IS_TRUE",
+      "original_text": "Confirm that patient or caregiver can acquire medication.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 52,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.292bfe0c6f2562"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_f50c6dc1549c88b3",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.4",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Evaluate and address psychosocial status issues as indicated. See Psychosocial Assessment SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "Evaluate and address psychosocial status issues as indicated. See Psychosocial Assessment SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.1",
+      "review_status": "auto_extracted",
+      "sort_order": 18,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.f50c6dc1549c88"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.41",
+        "log.M190.dplan.42",
+        "log.M190.dplan.43"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.40",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Educate patient and caregiver.",
+      "operator": "CHECKLIST",
+      "original_text": "Educate patient and caregiver.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 56,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.f6889ddd403904"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_b2c4bc1e0b005abb",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.41",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Provide complete medication list to patient and caregiver.",
+      "operator": "IS_TRUE",
+      "original_text": "Provide complete medication list to patient and caregiver.",
+      "parent_logic_node_id": "log.M190.dplan.40",
+      "review_status": "auto_extracted",
+      "sort_order": 53,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.006.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.b2c4bc1e0b005a"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_b532e84f55aa047d",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.42",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Importance of presenting personal medication list to all providers at each care transition, including all provider appointments",
+      "operator": "IS_TRUE",
+      "original_text": "Importance of presenting personal medication list to all providers at each care transition, including all provider appointments",
+      "parent_logic_node_id": "log.M190.dplan.40",
+      "review_status": "auto_extracted",
+      "sort_order": 54,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.006.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.b532e84f55aa04"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_c3682455f885a089",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 4,
+      "logic_node_id": "log.M190.dplan.43",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Reason, dosage, and timing of medication (eg, use \"teach-back\" techniques) )",
+      "operator": "IS_TRUE",
+      "original_text": "Reason, dosage, and timing of medication (eg, use \"teach-back\" techniques) ( 61 )",
+      "parent_logic_node_id": "log.M190.dplan.40",
+      "review_status": "auto_extracted",
+      "sort_order": 55,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.006.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.c3682455f885a0"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_5a7a51adebe0d0ac",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.44",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Encourage communication between patient, caregiver, and pharmacy for obtaining prescriptions, setting up home medication delivery, and reviewing for drug-drug interactions.",
+      "operator": "IS_TRUE",
+      "original_text": "Encourage communication between patient, caregiver, and pharmacy for obtaining prescriptions, setting up home medication delivery, and reviewing for drug-drug interactions.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 57,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.007"
+      ],
+      "source_ref_ids": [
+        "sr.M190.5a7a51adebe0d0"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_f102abf07440f2f5",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.45",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "See Medication Reconciliation Tool SR for further information.",
+      "operator": "IS_TRUE",
+      "original_text": "See Medication Reconciliation Tool SR for further information.",
+      "parent_logic_node_id": "log.M190.dplan.34",
+      "review_status": "auto_extracted",
+      "sort_order": 58,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.002.008"
+      ],
+      "source_ref_ids": [
+        "sr.M190.f102abf07440f2"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.47",
+        "log.M190.dplan.48",
+        "log.M190.dplan.49"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.46",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Plan communicated to patient, caregiver, and all members of care team, including )",
+      "operator": "CHECKLIST",
+      "original_text": "Plan communicated to patient, caregiver, and all members of care team, including ( 62 ):",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 63,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d66e2a070a1b28"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_472800e932382808",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.47",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Inpatient care and service providers",
+      "operator": "IS_TRUE",
+      "original_text": "Inpatient care and service providers",
+      "parent_logic_node_id": "log.M190.dplan.46",
+      "review_status": "auto_extracted",
+      "sort_order": 60,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.003.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.472800e9323828"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_f227baca0faa5eb7",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.48",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Primary care provider",
+      "operator": "IS_TRUE",
+      "original_text": "Primary care provider",
+      "parent_logic_node_id": "log.M190.dplan.46",
+      "review_status": "auto_extracted",
+      "sort_order": 61,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.003.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.f227baca0faa5e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_4ed88bdb4ff2203e",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.49",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "All post-discharge care and service providers",
+      "operator": "IS_TRUE",
+      "original_text": "All post-discharge care and service providers",
+      "parent_logic_node_id": "log.M190.dplan.46",
+      "review_status": "auto_extracted",
+      "sort_order": 62,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.003.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.4ed88bdb4ff220"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_f3fc1a219ba383e7",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.5",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Evaluate and address social determinants of health (eg, housing, food). See Social Determinants of Health Screening Tool SR for further information. ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Evaluate and address social determinants of health (eg, housing, food). See Social Determinants of Health Screening Tool SR for further information. ( 48 ) ( 49 )",
+      "parent_logic_node_id": "log.M190.dplan.1",
+      "review_status": "auto_extracted",
+      "sort_order": 19,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.f3fc1a219ba383"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.51",
+        "log.M190.dplan.52",
+        "log.M190.dplan.53",
+        "log.M190.dplan.54",
+        "log.M190.dplan.55",
+        "log.M190.dplan.56",
+        "log.M190.dplan.57",
+        "log.M190.dplan.58"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "may include"
+      },
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.50",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Appointments planned or scheduled, which may include",
+      "operator": "OPTIONS",
+      "original_text": "Appointments planned or scheduled, which may include:",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 72,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.fac699f2798229"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_8eb72e3ef08c3083",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.51",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Primary care provider ) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Primary care provider ( 52 ) ( 63 ) ( 64 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 64,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.8eb72e3ef08c30"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_9a3cc4a8c786f581",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.52",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Cardiologist )",
+      "operator": "IS_TRUE",
+      "original_text": "Cardiologist ( 65 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 65,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.9a3cc4a8c786f5"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_e7b77f58e7acc234",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.53",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Dietitian )",
+      "operator": "IS_TRUE",
+      "original_text": "Dietitian ( 52 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 66,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.e7b77f58e7acc2"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_97cebee68ba7da6c",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.54",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Follow-up evaluation call. See Post-Acute Care Follow-Up Call Tool SR for further information. ) ) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Follow-up evaluation call. See Post-Acute Care Follow-Up Call Tool SR for further information. ( 1 ) ( 2 ) ( 63 ) ( 66 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 67,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.97cebee68ba7da"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_3874c684aba507e9",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.55",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Palliative or end-of-life care provider )",
+      "operator": "IS_TRUE",
+      "original_text": "Palliative or end-of-life care provider ( 67 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 68,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.3874c684aba507"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_d05f3a4a1cec69b9",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.56",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Rehabilitation therapy services ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Rehabilitation therapy services ( 2 ) ( 52 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 69,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d05f3a4a1cec69"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_c8ee48d9b17fc5fe",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.57",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Specialists for management of comorbidities as needed )",
+      "operator": "IS_TRUE",
+      "original_text": "Specialists for management of comorbidities as needed ( 68 )",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 70,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.007"
+      ],
+      "source_ref_ids": [
+        "sr.M190.c8ee48d9b17fc5"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_027616981c0a2176",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.58",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Other",
+      "operator": "IS_TRUE",
+      "original_text": "Other",
+      "parent_logic_node_id": "log.M190.dplan.50",
+      "review_status": "auto_extracted",
+      "sort_order": 71,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.004.008"
+      ],
+      "source_ref_ids": [
+        "sr.M190.027616981c0a21"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.60",
+        "log.M190.dplan.61",
+        "log.M190.dplan.62",
+        "log.M190.dplan.63"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "may include"
+      },
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.59",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Outpatient testing and procedure plans made, which may include",
+      "operator": "OPTIONS",
+      "original_text": "Outpatient testing and procedure plans made, which may include:",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 77,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.5c1e4ad3926478"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_7b38af0f0d3e74ae",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.6",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Evaluate and address patient or caregiver preferences as indicated.",
+      "operator": "IS_TRUE",
+      "original_text": "Evaluate and address patient or caregiver preferences as indicated.",
+      "parent_logic_node_id": "log.M190.dplan.1",
+      "review_status": "auto_extracted",
+      "sort_order": 20,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.7b38af0f0d3e74"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_b753cba47111a8d1",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.60",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Echocardiogram",
+      "operator": "IS_TRUE",
+      "original_text": "Echocardiogram",
+      "parent_logic_node_id": "log.M190.dplan.59",
+      "review_status": "auto_extracted",
+      "sort_order": 73,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.005.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.b753cba47111a8"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_a8523323cf71d054",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.61",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Exercise stress test )",
+      "operator": "IS_TRUE",
+      "original_text": "Exercise stress test ( 52 )",
+      "parent_logic_node_id": "log.M190.dplan.59",
+      "review_status": "auto_extracted",
+      "sort_order": 74,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.005.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.a8523323cf71d0"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_71a4c8fa3b35941b",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.62",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Laboratory testing )",
+      "operator": "IS_TRUE",
+      "original_text": "Laboratory testing ( 69 )",
+      "parent_logic_node_id": "log.M190.dplan.59",
+      "review_status": "auto_extracted",
+      "sort_order": 75,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.005.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.71a4c8fa3b3594"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_b935ab8b0a39a66e",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.63",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Other",
+      "operator": "IS_TRUE",
+      "original_text": "Other",
+      "parent_logic_node_id": "log.M190.dplan.59",
+      "review_status": "auto_extracted",
+      "sort_order": 76,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.005.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.b935ab8b0a39a6"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.65",
+        "log.M190.dplan.66",
+        "log.M190.dplan.67",
+        "log.M190.dplan.68",
+        "log.M190.dplan.69",
+        "log.M190.dplan.70",
+        "log.M190.dplan.71",
+        "log.M190.dplan.72",
+        "log.M190.dplan.73"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "may include"
+      },
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.64",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Referrals made for assistance or support, which may include",
+      "operator": "OPTIONS",
+      "original_text": "Referrals made for assistance or support, which may include:",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 87,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.cdc18c342c7a08"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_5d86f49c0a6c0be8",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.65",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Alcohol and other drug abuse or dependence treatment )",
+      "operator": "IS_TRUE",
+      "original_text": "Alcohol and other drug abuse or dependence treatment ( 70 )",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 78,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.5d86f49c0a6c0b"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_60a16ec7ef92f490",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.66",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Community services",
+      "operator": "IS_TRUE",
+      "original_text": "Community services",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 79,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.60a16ec7ef92f4"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_bcc907b15ec67d02",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.67",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Educational program (eg, chronic condition management, self-management) ) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Educational program (eg, chronic condition management, self-management) ( 64 ) ( 69 ) ( 71 )",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 80,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.bcc907b15ec67d"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_f06f88cc7e04bcca",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.68",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "End-stage disease planning )",
+      "operator": "IS_TRUE",
+      "original_text": "End-stage disease planning ( 52 )",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 81,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.f06f88cc7e04bc"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_fe5ef25618a521ae",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.69",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Financial, for follow-up care, medication, and transportation",
+      "operator": "IS_TRUE",
+      "original_text": "Financial, for follow-up care, medication, and transportation",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 82,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.fe5ef25618a521"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.8",
+        "log.M190.dplan.9",
+        "log.M190.dplan.10",
+        "log.M190.dplan.11",
+        "log.M190.dplan.12"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.7",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Identify skilled services needed at next level of care, with specific attention to",
+      "operator": "CHECKLIST",
+      "original_text": "Identify skilled services needed at next level of care, with specific attention to:",
+      "parent_logic_node_id": "log.M190.dplan.1",
+      "review_status": "auto_extracted",
+      "sort_order": 26,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.1f80e0c1803a84"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_cf229d4f83f0c995",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.70",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Self-help or support groups )",
+      "operator": "IS_TRUE",
+      "original_text": "Self-help or support groups ( 52 )",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 83,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.cf229d4f83f0c9"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_41b7f5e81fe4807b",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.71",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Social services (eg, social programs, advance directives) )",
+      "operator": "IS_TRUE",
+      "original_text": "Social services (eg, social programs, advance directives) ( 71 )",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 84,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.007"
+      ],
+      "source_ref_ids": [
+        "sr.M190.41b7f5e81fe480"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_2e597b3c84c5d8aa",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.72",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Tobacco use treatment ) ) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Tobacco use treatment ( 52 ) ( 69 ) ( 70 ) ( 72 )",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 85,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.008"
+      ],
+      "source_ref_ids": [
+        "sr.M190.2e597b3c84c5d8"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_916d077431b92785",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.73",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Other",
+      "operator": "IS_TRUE",
+      "original_text": "Other",
+      "parent_logic_node_id": "log.M190.dplan.64",
+      "review_status": "auto_extracted",
+      "sort_order": 86,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.006.009"
+      ],
+      "source_ref_ids": [
+        "sr.M190.916d077431b927"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.75",
+        "log.M190.dplan.76",
+        "log.M190.dplan.77"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "may include"
+      },
+      "logic_depth": 2,
+      "logic_node_id": "log.M190.dplan.74",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Medical equipment and supplies coordinated (ie, delivered or delivery confirmed), which may include )",
+      "operator": "OPTIONS",
+      "original_text": "Medical equipment and supplies coordinated (ie, delivered or delivery confirmed), which may include ( 52 ):",
+      "parent_logic_node_id": "log.M190.dplan.30",
+      "review_status": "auto_extracted",
+      "sort_order": 91,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.007"
+      ],
+      "source_ref_ids": [
+        "sr.M190.25f8f778a9e972"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_df9f6ef3bd09a8e8",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.75",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Blood pressure cuff",
+      "operator": "IS_TRUE",
+      "original_text": "Blood pressure cuff",
+      "parent_logic_node_id": "log.M190.dplan.74",
+      "review_status": "auto_extracted",
+      "sort_order": 88,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.007.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.df9f6ef3bd09a8"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_86bb772a8f64594a",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.76",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Weight scale )",
+      "operator": "IS_TRUE",
+      "original_text": "Weight scale ( 2 )",
+      "parent_logic_node_id": "log.M190.dplan.74",
+      "review_status": "auto_extracted",
+      "sort_order": 89,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.007.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.86bb772a8f6459"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_29b30a56675c4eeb",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.77",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Other",
+      "operator": "IS_TRUE",
+      "original_text": "Other",
+      "parent_logic_node_id": "log.M190.dplan.74",
+      "review_status": "auto_extracted",
+      "sort_order": 90,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.003.007.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.29b30a56675c4e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_77bf61ecb1c8f6bd",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.8",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Cardiovascular status assessment )",
+      "operator": "IS_TRUE",
+      "original_text": "Cardiovascular status assessment ( 50 )",
+      "parent_logic_node_id": "log.M190.dplan.7",
+      "review_status": "auto_extracted",
+      "sort_order": 21,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.006.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.77bf61ecb1c8f6"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_d62a340c381b9ec7",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": null,
+      "logic_depth": 3,
+      "logic_node_id": "log.M190.dplan.9",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Medication management, adherence instruction, and side effects assessment )",
+      "operator": "IS_TRUE",
+      "original_text": "Medication management, adherence instruction, and side effects assessment ( 51 )",
+      "parent_logic_node_id": "log.M190.dplan.7",
+      "review_status": "auto_extracted",
+      "sort_order": 22,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001.001.006.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.d62a340c381b9e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_9efb819860096e4e",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p07",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.path7.1",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "New need for oxygen therapy to keep oxygen saturation above 90% (or increased FiO 2 need from baseline)",
+      "operator": "IS_TRUE",
+      "original_text": "New need for oxygen therapy to keep oxygen saturation above 90% (or increased FiO 2 need from baseline)",
+      "parent_logic_node_id": "logic.M190.p7.root",
+      "review_status": "auto_extracted",
+      "sort_order": 7,
+      "source_node_ids": [
+        "M190.source.admission.001.007.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.9efb819860096e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "leaf_m190_27e5d3655fec392a",
+      "definition_link_status": "unlinked",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p07",
+      "logic_basis": null,
+      "logic_depth": 1,
+      "logic_node_id": "log.M190.path7.2",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Has not improved sufficiently with observation care (eg, appropriately dosed IV diuretics)",
+      "operator": "IS_TRUE",
+      "original_text": "Has not improved sufficiently with observation care (eg, appropriately dosed IV diuretics) [ B ]",
+      "parent_logic_node_id": "logic.M190.p7.root",
+      "review_status": "auto_extracted",
+      "sort_order": 8,
+      "source_node_ids": [
+        "M190.source.admission.001.007.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.27e5d3655fec39"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.ddst.1",
+        "log.M190.ddst.2",
+        "log.M190.ddst.3",
+        "log.M190.ddst.4"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.destination",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "may include"
+      },
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.discharge.destination.root",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Post-hospital levels of admission may include",
+      "operator": "OPTIONS",
+      "original_text": "Post-hospital levels of admission may include:",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "sort_order": 98,
+      "source_node_ids": [
+        "M190.source.discharge_destination.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.118e7fea9d5b26"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.dplan.1",
+        "log.M190.dplan.13",
+        "log.M190.dplan.30"
+      ],
+      "condition_key": null,
+      "definition_link_status": "not_applicable",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.discharge.planning",
+      "logic_basis": {
+        "confidence": "medium",
+        "raw_phrase": "includes"
+      },
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.discharge.planning.root",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Discharge planning includes",
+      "operator": "CHECKLIST",
+      "original_text": "Discharge planning includes [ M ] :",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "sort_order": 93,
+      "source_node_ids": [
+        "M190.source.discharge_planning.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.a5c27c05bf418e"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "hemodynamic_instability_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p01",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p1.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Hemodynamic instability ) ) ) ) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Hemodynamic instability ( 1 ) ( 2 ) ( 3 ) ( 7 ) ( 8 ) ( 9 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "hemodynamic_instability_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.hemodynamic_instability.root",
+        "source_popup_id": "popup.M190.b9cf64d42bc0",
+        "source_popup_title": "Definition - Hemodynamic instability"
+      },
+      "sort_order": 1,
+      "source_node_ids": [
+        "M190.source.admission.001.001"
+      ],
+      "source_ref_ids": [
+        "sr.M190.ee8034e0cabc8d"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "altered_mental_status_severe_or_persistent_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p10",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p10.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Altered mental status that is severe or persistent )",
+      "operator": "IS_TRUE",
+      "original_text": "Altered mental status that is severe or persistent ( 8 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "altered_mental_status_severe_or_persistent_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.altered_mental_status.severe_persistent.root",
+        "source_popup_id": "popup.M190.3b8fe15ad41d",
+        "source_popup_title": "Definition - Altered mental status that is severe or persistent"
+      },
+      "sort_order": 12,
+      "source_node_ids": [
+        "M190.source.admission.001.010"
+      ],
+      "source_ref_ids": [
+        "sr.M190.b85e929a41a447"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "acute_renal_insufficiency_evidence_gt_50pct_egfr_reduction_from_baseline_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p11",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p11.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Increased creatinine with reduction of more than 50% in estimated glomerular filtration rate from baseline eGFR - Adult Calculator )",
+      "operator": "IS_TRUE",
+      "original_text": "Increased creatinine with reduction of more than 50% in estimated glomerular filtration rate from baseline [ C ] eGFR - Adult Calculator ( 3 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "acute_renal_insufficiency_evidence_gt_50pct_egfr_reduction_from_baseline_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.m190 verbatim.eb27736c36bed4",
+        "source_popup_id": "popup.M190.ecf26a181749",
+        "source_popup_title": "Definition - Severe renal failure"
+      },
+      "sort_order": 13,
+      "source_node_ids": [
+        "M190.source.admission.001.011"
+      ],
+      "source_ref_ids": [
+        "sr.M190.a3b238ca1258b9"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "progressive_renal_insufficiency_evidence_gt_25pct_egfr_reduction_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p12",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p12.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Progressively (ongoing) rising creatinine with reduction of more than 25% in estimated glomerular filtration rate from baseline eGFR - Adult Calculator ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Progressively (ongoing) rising creatinine with reduction of more than 25% in estimated glomerular filtration rate from baseline [ C ] eGFR - Adult Calculator ( 3 ) ( 7 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "progressive_renal_insufficiency_evidence_gt_25pct_egfr_reduction_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.m190 verbatim.db2927ca9dc33f",
+        "source_popup_id": "popup.M190.ecf26a181749",
+        "source_popup_title": "Definition - Severe renal failure"
+      },
+      "sort_order": 14,
+      "source_node_ids": [
+        "M190.source.admission.001.012"
+      ],
+      "source_ref_ids": [
+        "sr.M190.2476f5c249a223"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "pulmonary_artery_catheter_monitoring_needed_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p13",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p13.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Pulmonary artery catheter monitoring needed ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Pulmonary artery catheter monitoring needed [ D ] ( 1 ) ( 8 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "pulmonary_artery_catheter_monitoring_needed_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.m190 verbatim.fb1f0682700ae2",
+        "source_popup_id": "popup.M190.5054593a7d65",
+        "source_popup_title": "Definition - Observation care"
+      },
+      "sort_order": 15,
+      "source_node_ids": [
+        "M190.source.admission.001.013"
+      ],
+      "source_ref_ids": [
+        "sr.M190.b7bfac571e13bd"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "severe_electrolyte_abnormality_requiring_inpatient_care_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p02",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p2.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Severe electrolyte abnormalities requiring inpatient care ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Severe electrolyte abnormalities requiring inpatient care ( 3 ) ( 7 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "severe_electrolyte_abnormality_requiring_inpatient_care_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.severe_electrolyte_inpatient.root",
+        "source_popup_id": "popup.M190.62829532e261",
+        "source_popup_title": "Definition - Severe electrolyte abnormalities requiring inpatient care"
+      },
+      "sort_order": 2,
+      "source_node_ids": [
+        "M190.source.admission.001.002"
+      ],
+      "source_ref_ids": [
+        "sr.M190.059eba2190e1d3"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "cardiac_arrhythmia_of_immediate_concern_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p03",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p3.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Cardiac arrhythmias of immediate concern ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Cardiac arrhythmias of immediate concern ( 3 ) ( 7 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "cardiac_arrhythmia_of_immediate_concern_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.cardiac_arrhythmia_immediate.root",
+        "source_popup_id": "popup.M190.a2e210a86613",
+        "source_popup_title": "Definition - Cardiac arrhythmias of immediate concern"
+      },
+      "sort_order": 3,
+      "source_node_ids": [
+        "M190.source.admission.001.003"
+      ],
+      "source_ref_ids": [
+        "sr.M190.02f9903f53c27f"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "acute_myocardial_ischemia_with_heart_failure_admission_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p04",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p4.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Acute myocardial ischemia causing or associated with failure. See Angina ISC or Myocardial Infarction ISC guideline as appropriate. ) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Acute myocardial ischemia causing or associated with failure. See Angina ISC or Myocardial Infarction ISC guideline as appropriate. ( 1 ) ( 3 ) ( 7 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "acute_myocardial_ischemia_with_heart_failure_admission_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.m190 verbatim.a7fe7d0528398c",
+        "source_popup_id": "",
+        "source_popup_title": "M190 Admission (synthetic linkage)"
+      },
+      "sort_order": 4,
+      "source_node_ids": [
+        "M190.source.admission.001.004"
+      ],
+      "source_ref_ids": [
+        "sr.M190.8d97a9cde6a03f"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "very_severe_pulmonary_edema_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p05",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p5.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Pulmonary edema that is very severe (eg, invasive or noninvasive assisted ventilation needed, imminent, or likely; or need for 100% oxygen to keep oxygen saturation above 90%) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Pulmonary edema that is very severe (eg, invasive or noninvasive assisted ventilation needed, [ A ] imminent, or likely; or need for 100% oxygen to keep oxygen saturation above 90%) ( 3 ) ( 10 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "very_severe_pulmonary_edema_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.m190 verbatim.75fecdcfed3e65",
+        "source_popup_id": "popup.M190.a1cca8e3553e",
+        "source_popup_title": "Definition - Respiratory distress"
+      },
+      "sort_order": 5,
+      "source_node_ids": [
+        "M190.source.admission.001.005"
+      ],
+      "source_ref_ids": [
+        "sr.M190.55a7d3488fb48b"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "severe_anasarca_or_peripheral_edema_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p06",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p6.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Anasarca or peripheral edema that is severe (eg, significant paroxysmal dyspnea, inability to ambulate or void, skin breakdown, concomitant ascites) ) )",
+      "operator": "IS_TRUE",
+      "original_text": "Anasarca or peripheral edema that is severe (eg, significant paroxysmal dyspnea, inability to ambulate or void, skin breakdown, concomitant ascites) ( 2 ) ( 11 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "severe_anasarca_or_peripheral_edema_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.anasarca_severe_peripheral.root",
+        "source_popup_id": "popup.M190.8e572ba6c033",
+        "source_popup_title": "Definition - Anasarca"
+      },
+      "sort_order": 6,
+      "source_node_ids": [
+        "M190.source.admission.001.006"
+      ],
+      "source_ref_ids": [
+        "sr.M190.1d688d41f18ba9"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [
+        "log.M190.path7.1",
+        "log.M190.path7.2"
+      ],
+      "condition_key": "pulmonary_edema_with_oxygen_need_and_observation_failure_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_children",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p07",
+      "logic_basis": {
+        "confidence": "high",
+        "raw_phrase": "all of the following"
+      },
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p7.root",
+      "measurement": null,
+      "node_kind": "composite",
+      "normalized_text": "Pulmonary edema and ALL of the following ) )",
+      "operator": "AND",
+      "original_text": "Pulmonary edema and ALL of the following ( 3 ) ( 7 ):",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "pulmonary_edema_with_oxygen_need_and_observation_failure_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.pe_with_o2_observation_bundle.root",
+        "source_popup_id": "popup.M190.abddb2bfc8f5",
+        "source_popup_title": "Definition - Hypoxemia"
+      },
+      "sort_order": 9,
+      "source_node_ids": [
+        "M190.source.admission.001.007"
+      ],
+      "source_ref_ids": [
+        "sr.M190.fae60a7d880fa2"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": null,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "persistent_tachypnea_despite_observation_care_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p08",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p8.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Tachypnea that persists despite observation care )",
+      "operator": "IS_TRUE",
+      "original_text": "Tachypnea that persists despite observation care ( 7 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "persistent_tachypnea_despite_observation_care_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.persistent_tachypnea_observation.root",
+        "source_popup_id": "popup.M190.528e628fe259",
+        "source_popup_title": "Definition - Tachypnea"
+      },
+      "sort_order": 10,
+      "source_node_ids": [
+        "M190.source.admission.001.008"
+      ],
+      "source_ref_ids": [
+        "sr.M190.6198725b443938"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    },
+    {
+      "child_logic_node_ids": [],
+      "condition_key": "persistent_dyspnea_above_baseline_despite_observation_care_condition_present",
+      "definition_link_status": "linked_shared_definition",
+      "evaluation_mode": "evaluate_atomic_fact",
+      "example_only": false,
+      "level": 4,
+      "linked_domain_node_id": "M190.admission.p09",
+      "logic_basis": null,
+      "logic_depth": 0,
+      "logic_node_id": "logic.M190.p9.root",
+      "measurement": null,
+      "node_kind": "atomic",
+      "normalized_text": "Dyspnea (above baseline) that persists despite observation care )",
+      "operator": "IS_TRUE",
+      "original_text": "Dyspnea (above baseline) that persists despite observation care ( 7 )",
+      "parent_logic_node_id": null,
+      "review_status": "auto_extracted",
+      "shared_definition_ref": {
+        "condition_key": "persistent_dyspnea_above_baseline_despite_observation_care_condition_present",
+        "definition_type": "shared_composite_condition",
+        "root_composite_id": "comp.dyspnea_persistent_placeholder.root",
+        "source_popup_id": "popup.M190.a1cca8e3553e",
+        "source_popup_title": "Definition - Respiratory distress"
+      },
+      "sort_order": 11,
+      "source_node_ids": [
+        "M190.source.admission.001.009"
+      ],
+      "source_ref_ids": [
+        "sr.M190.7288d23b71cc2c"
+      ],
+      "strict_boolean_evaluation": true,
+      "unit": null,
+      "value": true,
+      "warnings": []
+    }
+  ],
+  "mcg_code": "M190",
+  "mcg_title": "Heart Failure",
+  "schema_version": "mcg_linked_rule_tree.v1",
+  "source_files": {
+    "domain_rule_tree": "rules/mcg/domain-trees/M190.domain-rule-tree.v1.json",
+    "domain_rule_tree_sha256": "f9be15f4f1e7186254c0cfb0cb5a586921f4ea6ef684e9635928aa036284e0f2",
+    "shared_condition_definitions": "rules/mcg/shared-condition-definitions/M190.shared-condition-definitions.v1.json",
+    "shared_condition_definitions_sha256": "bff5ad23afb8059a32a86fd18b67762687d6535b7ed8755a8289a6f7d758c6ea"
+  }
+}

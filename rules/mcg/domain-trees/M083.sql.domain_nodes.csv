@@ -1,0 +1,10 @@
+level,node_id,node_type,domain,parent_node_id,logic_root_id,original_text
+0,MCG,guideline_library_root,,,,""
+1,M083,guideline,,MCG,,Admission is indicated for 1 or more of the following ) ) )
+2,M083.admission,guideline_domain_root,admission,M083,,Admission is indicated for 1 or more of the following ) ) )
+2,M083.discharge,guideline_domain_root,discharge,M083,,""
+3,M083.discharge.planning,discharge_planning_section,discharge,M083.discharge,logic.M083.discharge.planning.root,Discharge planning includes
+3,M083.discharge.destination,discharge_destination_section,discharge,M083.discharge,logic.M083.discharge.destination.root,Post-hospital levels of admission may include
+3,M083.admission.acute_ischemic_stroke_neurologic_findings,admission_path,admission,M083.admission,logic.M083.p1.root,"Acute ischemic stroke with neurologic findings that warrant inpatient care, as indicated by 1 or more of the following"
+3,M083.admission.acute_ischemic_stroke_clinical_need_monitoring,admission_path,admission,M083.admission,logic.M083.p2.root,"Acute ischemic stroke with clinical need for inpatient care or monitoring, as indicated by 1 or more of the following"
+3,M083.admission.thrombolysis_or_thrombectomy_performed_or_planned,admission_path,admission,M083.admission,logic.M083.p3.root,Thrombolysis or thrombectomy performed or planned

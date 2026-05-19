@@ -1,21 +1,21 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import { HomePage } from './pages/HomePage';
+import { PipelineReviewPage } from './pages/PipelineReviewPage';
+
 export function App() {
-  const steps = [
-    'Step 0 project initialized',
-    'Step 1 MCG HTML capture',
-    'Step 2 source-tree JSON extraction',
-    'Step 3 Supabase staging',
-  ] as const;
-
   return (
-    <main className="app">
-      <h1 className="title">MCG Rule Engine v2</h1>
-      <p className="subtitle">Source ingestion pipeline placeholder</p>
-
-      <ul className="checklist">
-        {steps.map((label) => (
-          <li key={label}>{label}</li>
-        ))}
-      </ul>
-    </main>
+    <BrowserRouter>
+      <div className="app-shell">
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/rule-engine" element={<HomePage />} />
+          <Route path="/rule-engine/pipeline-review" element={<PipelineReviewPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }

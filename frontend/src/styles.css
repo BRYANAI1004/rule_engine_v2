@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+/* Neutral shell — aligns with pipeline review warm stone canvas */
+:root {
+  --shell-bg: #f6f3ee;
+  --shell-text: #1f2937;
+}
+
 body {
   margin: 0;
   font-family:
@@ -14,33 +20,29 @@ body {
     Roboto,
     sans-serif;
   line-height: 1.5;
-  background: #0f1419;
-  color: #e6edf3;
+  background-color: var(--shell-bg);
+  background-image: radial-gradient(900px 480px at 50% -10%, rgba(120, 113, 99, 0.05), transparent 55%);
+  color: var(--shell-text);
 }
 
-.app {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem;
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  border: 1px solid rgba(212, 204, 194, 0.95);
 }
 
-.title {
-  margin: 0 0 0.35rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--shell-bg),
+    0 0 0 4px rgba(55, 55, 50, 0.38);
 }
 
-.subtitle {
-  margin: 0 0 1.5rem;
-  color: #8b949e;
-}
-
-.checklist {
-  margin: 0;
-  padding-left: 1.25rem;
-  color: #c9d1d9;
-}
-
-.checklist li {
-  margin-bottom: 0.35rem;
+.app-shell {
+  min-height: 100vh;
 }

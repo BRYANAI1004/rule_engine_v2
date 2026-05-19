@@ -1,0 +1,99 @@
+logic_node_id,condition_key,operator,value,rule_text,source_quote
+logic.M083.p3.root,thrombolysis_or_thrombectomy_performed_or_planned_condition_present,IS_TRUE,true,Thrombolysis or thrombectomy performed or planned [ H ] ( 2 ) ( 23 ) ( 24 ),Thrombolysis or thrombectomy performed or planned [ H ] ( 2 ) ( 23 ) ( 24 )
+log.M083.ad1.0,nihss_score,>,2,National Institutes of Health Stroke Scale (NIHSS) score greater than 2 [ B ] ( 2 ) ( 9 ),National Institutes of Health Stroke Scale (NIHSS) score greater than 2 [ B ] ( 2 ) ( 9 )
+log.M083.ad1.1,hemorrhagic_transformation_condition_present,IS_TRUE,true,Evidence of hemorrhagic transformation ( 4 ) ( 9 ),Evidence of hemorrhagic transformation ( 4 ) ( 9 )
+log.M083.ad1.2,altered_mental_status_condition_present,IS_TRUE,true,Altered mental status ( 10 ),Altered mental status ( 10 )
+log.M083.ad1.3,dysphagia_evaluation_required,IS_TRUE,true,"Dysphagia that warrants evaluation (eg, aspiration risk suspected) ( 2 ) ( 9 )","Dysphagia that warrants evaluation (eg, aspiration risk suspected) ( 2 ) ( 9 )"
+log.M083.ad1.4,significant_limb_weakness_condition_present,IS_TRUE,true,"Significant arm or leg weakness (eg, limiting movement against gravity) ( 4 )","Significant arm or leg weakness (eg, limiting movement against gravity) ( 4 )"
+log.M083.ad1.5,aphasia_condition_present,IS_TRUE,true,Aphasia ( 4 ),Aphasia ( 4 )
+log.M083.ad1.6,gait_impairment_condition_present,IS_TRUE,true,Gait impairment ( 4 ),Gait impairment ( 4 )
+log.M083.ad1.7,brain_imaging_finding_requiring_inpatient_care_condition_present,IS_TRUE,true,"Finding on brain imaging that requires inpatient care (eg, edema, threatened herniation) ( 2 ) ( 9 )","Finding on brain imaging that requires inpatient care (eg, edema, threatened herniation) ( 2 ) ( 9 )"
+log.M083.ad1.8,neurologic_worsening_monitoring_required,IS_TRUE,true,"Clinical monitoring for neurologic worsening needed (eg, large infarct, posterior circulation infarct) [ C ] ( 2 ) ( 9 ) ( 11 )","Clinical monitoring for neurologic worsening needed (eg, large infarct, posterior circulation infarct) [ C ] ( 2 ) ( 9 ) ( 11 )"
+log.M083.ad1.9,clinical_stability_unclear_condition_present,IS_TRUE,true,"Clinical stability unclear (eg, recurrent or worsening findings)","Clinical stability unclear (eg, recurrent or worsening findings)"
+log.M083.ad1.cx,acute_ischemic_stroke_condition_present,IS_TRUE,true,Acute ischemic stroke,"Acute ischemic stroke [ A ] with neurologic findings that warrant inpatient care, as indicated by 1 or more of the following:"
+log.M083.ad2.0,hemodynamic_instability_condition_present,IS_TRUE,true,Hemodynamic instability ( 2 ) ( 9 ) ( 12 ),Hemodynamic instability ( 2 ) ( 9 ) ( 12 )
+log.M083.ad2.1,cardiac_arrhythmia_of_immediate_concern_condition_present,IS_TRUE,true,Cardiac arrhythmias of immediate concern ( 9 ) ( 13 ) ( 14 ),Cardiac arrhythmias of immediate concern ( 9 ) ( 13 ) ( 14 )
+log.M083.ad2.2,clinically_significant_cardiac_or_vascular_disorder_condition_present,IS_TRUE,true,"Clinically significant cardiac or vascular disorder identified (eg, on echocardiogram, imaging) that requires inpatient care (eg, severe valvular disease, atrial myxoma, cervical artery dissection) ( 15 )","Clinically significant cardiac or vascular disorder identified (eg, on echocardiogram, imaging) that requires inpatient care (eg, severe valvular disease, atrial myxoma, cervical artery dissection) ( 15 )"
+log.M083.ad2.3,cerebral_venous_thrombosis_condition_present,IS_TRUE,true,Ischemic stroke due to cerebral venous thrombosis [ D ] ( 1 ) ( 16 ),Ischemic stroke due to cerebral venous thrombosis [ D ] ( 1 ) ( 16 )
+log.M083.ad2.4,respiratory_abnormality_condition_present,IS_TRUE,true,"Respiratory abnormalities (eg, Hypoxemia , impaired airway protection) ( 2 )","Respiratory abnormalities (eg, Hypoxemia , impaired airway protection) ( 2 )"
+log.M083.ad2.5,prolonged_cardiac_telemetry_monitoring_required,IS_TRUE,true,"Prolonged cardiac telemetry monitoring needed (eg, beyond observation care time frame) due to concern for Dangerous arrhythmia (ie, not in effort to detect atrial fibrillation) [ G ]","Prolonged cardiac telemetry monitoring needed (eg, beyond observation care time frame) due to concern for Dangerous arrhythmia (ie, not in effort to detect atrial fibrillation) [ G ]"
+log.M083.ad2.6,suspected_vasculitis_condition_present,IS_TRUE,true,Suspected vasculitis ( 21 ) ( 22 ),Suspected vasculitis ( 21 ) ( 22 )
+log.M083.ad2.htn.sbp,systolic_blood_pressure_mmhg,>,180,Systolic blood pressure greater than 180 mm Hg,"Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )"
+log.M083.ad2.htn.dbp,diastolic_blood_pressure_mmhg,>,120,Diastolic blood pressure greater than 120 mm Hg,"Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )"
+log.M083.ad2.htn.ped,pediatric_severe_hypertension_threshold_condition_present,IS_TRUE,true,"Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )","Severe hypertension (SBP greater than 180 mm Hg or DBP greater than 120 mm Hg, or greater than the 95th percentile for age, sex, and height plus 30 mm Hg in pediatric patients [ E ] [ F ] ) ( 2 ) ( 4 ) ( 17 ) ( 18 )"
+log.M083.ad2.cx,acute_ischemic_stroke_condition_present,IS_TRUE,true,Acute ischemic stroke,"Acute ischemic stroke [ A ] with clinical need for inpatient care or monitoring, as indicated by 1 or more of the following:"
+log.M083.dplan.2,leaf_M083_85374e15f639742e,IS_TRUE,true,Develop and modify treatment plan (involving multiple providers) as needed.,Develop and modify treatment plan (involving multiple providers) as needed.
+log.M083.dplan.3,leaf_M083_25478d580be091a8,IS_TRUE,true,Evaluate and address preadmission functioning as needed.,Evaluate and address preadmission functioning as needed.
+log.M083.dplan.4,leaf_M083_ca09a97962a730b2,IS_TRUE,true,Evaluate and address psychosocial status issues as indicated. See Psychosocial Assessment SR for further information.,Evaluate and address psychosocial status issues as indicated. See Psychosocial Assessment SR for further information.
+log.M083.dplan.5,leaf_M083_d454bc7f39a31837,IS_TRUE,true,"Evaluate and address social determinants of health (eg, housing, food). See Social Determinants of Health Screening Tool SR for further information.","Evaluate and address social determinants of health (eg, housing, food). See Social Determinants of Health Screening Tool SR for further information."
+log.M083.dplan.6,leaf_M083_94b541f8eef1a9bd,IS_TRUE,true,Evaluate and address patient or caregiver preferences as indicated.,Evaluate and address patient or caregiver preferences as indicated.
+log.M083.dplan.8,leaf_M083_0eb918ef7a2c935b,IS_TRUE,true,Home safety assessment ( 60 ),Home safety assessment ( 60 )
+log.M083.dplan.9,leaf_M083_324bc177b143d242,IS_TRUE,true,"Medication management, adherence instruction, and side effects assessment ( 61 ) ( 62 ) ( 63 )","Medication management, adherence instruction, and side effects assessment ( 61 ) ( 62 ) ( 63 )"
+log.M083.dplan.10,leaf_M083_d426310fb6a3e982,IS_TRUE,true,Neurologic status assessment,Neurologic status assessment
+log.M083.dplan.11,leaf_M083_fcf8d7a6cb4cfd06,IS_TRUE,true,Nutrition and hydration management,Nutrition and hydration management
+log.M083.dplan.12,leaf_M083_2549926d16e1cbdb,IS_TRUE,true,Ongoing education required ( 64 ),Ongoing education required ( 64 )
+log.M083.dplan.13,leaf_M083_292d870b88ca5ebe,IS_TRUE,true,Rehabilitation therapy or equipment coordination,Rehabilitation therapy or equipment coordination
+log.M083.dplan.16,leaf_M083_de00e8213b2cf38b,IS_TRUE,true,Home safety assessment. See Home Safety Assessment SR for further information.,Home safety assessment. See Home Safety Assessment SR for further information.
+log.M083.dplan.18,leaf_M083_0d5680e79cf7becd,IS_TRUE,true,Medical status stable for patient's condition,Medical status stable for patient's condition
+log.M083.dplan.19,leaf_M083_b9687bdeb0789f93,IS_TRUE,true,Functional care can safely be provided with available resources.,Functional care can safely be provided with available resources.
+log.M083.dplan.20,leaf_M083_3c6400855b5bdd0a,IS_TRUE,true,Mental status stable for patient's condition,Mental status stable for patient's condition
+log.M083.dplan.21,leaf_M083_8e9b1bb3bf2e957e,IS_TRUE,true,Medication availability confirmed and reconciliation complete,Medication availability confirmed and reconciliation complete
+log.M083.dplan.22,leaf_M083_7819b4aec4c2d9ac,IS_TRUE,true,Patient/caregiver education completed with written discharge instructions provided,Patient/caregiver education completed with written discharge instructions provided
+log.M083.dplan.23,leaf_M083_ffea424136870299,IS_TRUE,true,"Community resources identified and referrals made, as needed","Community resources identified and referrals made, as needed"
+log.M083.dplan.24,leaf_M083_bba5b46e1dcb436f,IS_TRUE,true,"Home care arranged, if indicated","Home care arranged, if indicated"
+log.M083.dplan.25,leaf_M083_0e7075f708f69d2c,IS_TRUE,true,"Necessary medical equipment delivery arranged or available in home, if indicated","Necessary medical equipment delivery arranged or available in home, if indicated"
+log.M083.dplan.26,leaf_M083_955dc92cec30cf9f,IS_TRUE,true,"Necessary medical supplies ordered, or patient/caregiver can obtain, if indicated","Necessary medical supplies ordered, or patient/caregiver can obtain, if indicated"
+log.M083.dplan.27,leaf_M083_bfec9d91758cb5b1,IS_TRUE,true,Access to follow-up care,Access to follow-up care
+log.M083.dplan.28,leaf_M083_9566a03daca79e4e,IS_TRUE,true,Self-management ability if appropriate. See Activities of Daily Living (ADL) and Instrumental Activities of Daily Living (IADL) Assessment SR for further information.,Self-management ability if appropriate. See Activities of Daily Living (ADL) and Instrumental Activities of Daily Living (IADL) Assessment SR for further information.
+log.M083.dplan.29,leaf_M083_8bedbe3d4f9c41c1,IS_TRUE,true,"Caregiver need, ability, and availability","Caregiver need, ability, and availability"
+log.M083.dplan.30,leaf_M083_7f9fdba8fe751255,IS_TRUE,true,Post-acute skilled care or custodial care as indicated. See Discharge Planning Tool SR for further information.,Post-acute skilled care or custodial care as indicated. See Discharge Planning Tool SR for further information.
+log.M083.dplan.33,leaf_M083_e22ac7f62d6a1b54,IS_TRUE,true,See Teach-Back Tool SR for further information.,See Teach-Back Tool SR for further information.
+log.M083.dplan.34,leaf_M083_f89460c0d779afa8,IS_TRUE,true,See Stroke: Ischemic: Patient Education for Clinicians SR for further information.,See Stroke: Ischemic: Patient Education for Clinicians SR for further information.
+log.M083.dplan.36,leaf_M083_33a37586c8ef0ccc,IS_TRUE,true,Compare patient's discharge list of medications (prescribed and over-the-counter) against provider's admission or transfer orders.,Compare patient's discharge list of medications (prescribed and over-the-counter) against provider's admission or transfer orders.
+log.M083.dplan.37,leaf_M083_b3f7e35426df2f2a,IS_TRUE,true,Assess each medication for correlation to disease state or medical condition.,Assess each medication for correlation to disease state or medical condition.
+log.M083.dplan.38,leaf_M083_2ddc5a77107590aa,IS_TRUE,true,"Report medication discrepancies to prescribing provider, attending physician, and primary care provider, and ensure accurate medication order is identified.","Report medication discrepancies to prescribing provider, attending physician, and primary care provider, and ensure accurate medication order is identified."
+log.M083.dplan.39,leaf_M083_764f4a9c4404966a,IS_TRUE,true,Provide reconciled medication list to all treating providers.,Provide reconciled medication list to all treating providers.
+log.M083.dplan.40,leaf_M083_254c8abf04df4088,IS_TRUE,true,Confirm that patient or caregiver can acquire medication.,Confirm that patient or caregiver can acquire medication.
+log.M083.dplan.42,leaf_M083_bfed76ba8ed62142,IS_TRUE,true,Provide complete medication list to patient and caregiver.,Provide complete medication list to patient and caregiver.
+log.M083.dplan.43,leaf_M083_36cc9db0c6248412,IS_TRUE,true,"Importance of presenting personal medication list to all providers at each care transition, including all provider appointments","Importance of presenting personal medication list to all providers at each care transition, including all provider appointments"
+log.M083.dplan.44,leaf_M083_4e364f7aa14dc46e,IS_TRUE,true,"Reason, dosage, and timing of medication (eg, use ""teach-back"" techniques) ( 71 )","Reason, dosage, and timing of medication (eg, use ""teach-back"" techniques) ( 71 )"
+log.M083.dplan.45,leaf_M083_06e55f726af856ae,IS_TRUE,true,"Encourage communication between patient, caregiver, and pharmacy for obtaining prescriptions, setting up home medication delivery, and reviewing for drug-drug interactions.","Encourage communication between patient, caregiver, and pharmacy for obtaining prescriptions, setting up home medication delivery, and reviewing for drug-drug interactions."
+log.M083.dplan.46,leaf_M083_7952c0a1bcb11156,IS_TRUE,true,See Medication Reconciliation Tool SR for further information.,See Medication Reconciliation Tool SR for further information.
+log.M083.dplan.48,leaf_M083_e6d38cc1f4a91381,IS_TRUE,true,Inpatient care and service providers,Inpatient care and service providers
+log.M083.dplan.49,leaf_M083_6dcc367fc68f90bb,IS_TRUE,true,Primary care provider,Primary care provider
+log.M083.dplan.50,leaf_M083_1f6c65958d44f7e2,IS_TRUE,true,All post-discharge care and service providers,All post-discharge care and service providers
+log.M083.dplan.52,leaf_M083_9495db04c1280e0a,IS_TRUE,true,Primary care provider ( 73 ),Primary care provider ( 73 )
+log.M083.dplan.53,leaf_M083_d6b8e0afd1346535,IS_TRUE,true,Cardiologist,Cardiologist
+log.M083.dplan.54,leaf_M083_7aa2e2c23d3f2eeb,IS_TRUE,true,Follow-up evaluation call. See Post-Acute Care Follow-Up Call Tool SR for further information. ( 74 ),Follow-up evaluation call. See Post-Acute Care Follow-Up Call Tool SR for further information. ( 74 )
+log.M083.dplan.55,leaf_M083_ce6d0c9182241f38,IS_TRUE,true,Neurologist ( 64 ),Neurologist ( 64 )
+log.M083.dplan.56,leaf_M083_415a9a9ce32dbdbe,IS_TRUE,true,Physiatrist or rehabilitation physician ( 64 ),Physiatrist or rehabilitation physician ( 64 )
+log.M083.dplan.57,leaf_M083_7ab374cd15549c32,IS_TRUE,true,Rehabilitation therapy services ( 75 ),Rehabilitation therapy services ( 75 )
+log.M083.dplan.58,leaf_M083_9fad17bde76e3706,IS_TRUE,true,Specialists for management of comorbidities as needed,Specialists for management of comorbidities as needed
+log.M083.dplan.59,leaf_M083_69232d2cfa5d5cfe,IS_TRUE,true,Other,Other
+log.M083.dplan.61,leaf_M083_c1db159558e5bd5a,IS_TRUE,true,Laboratory testing ( 76 ),Laboratory testing ( 76 )
+log.M083.dplan.62,leaf_M083_509bb3b5bbfd0156,IS_TRUE,true,Other,Other
+log.M083.dplan.64,leaf_M083_87ea899467d9df6c,IS_TRUE,true,Alcohol and other drug abuse or dependence treatment,Alcohol and other drug abuse or dependence treatment
+log.M083.dplan.65,leaf_M083_9e65723ec281a2c2,IS_TRUE,true,Community services ( 64 ),Community services ( 64 )
+log.M083.dplan.66,leaf_M083_980fb1474669eaae,IS_TRUE,true,"Educational program (eg, chronic condition management, self-management) ( 73 ) ( 77 )","Educational program (eg, chronic condition management, self-management) ( 73 ) ( 77 )"
+log.M083.dplan.67,leaf_M083_167a30871e9ee58a,IS_TRUE,true,End-stage disease planning,End-stage disease planning
+log.M083.dplan.68,leaf_M083_1c31df76164db36d,IS_TRUE,true,"Financial, for follow-up care, medication, and transportation","Financial, for follow-up care, medication, and transportation"
+log.M083.dplan.69,leaf_M083_a52c0c0cf00f47f2,IS_TRUE,true,Home architectural modifications,Home architectural modifications
+log.M083.dplan.70,leaf_M083_f2d220d4eb4b93c7,IS_TRUE,true,Self-help or support groups ( 64 ),Self-help or support groups ( 64 )
+log.M083.dplan.71,leaf_M083_094d92d9f758dcdc,IS_TRUE,true,"Social services (eg, social programs, advance directives) ( 64 )","Social services (eg, social programs, advance directives) ( 64 )"
+log.M083.dplan.72,leaf_M083_254d99dec6a92e3c,IS_TRUE,true,Tobacco use treatment ( 78 ) ( 79 ),Tobacco use treatment ( 78 ) ( 79 )
+log.M083.dplan.73,leaf_M083_49d74fe238d6dc53,IS_TRUE,true,Vocational rehabilitation ( 80 ),Vocational rehabilitation ( 80 )
+log.M083.dplan.74,leaf_M083_0ea8557ed0a06842,IS_TRUE,true,Other,Other
+log.M083.dplan.76,leaf_M083_01951050a0492b55,IS_TRUE,true,"Adaptive devices (eg, feeding tools, reachers) ( 75 )","Adaptive devices (eg, feeding tools, reachers) ( 75 )"
+log.M083.dplan.77,leaf_M083_b2b662ebb3d037ab,IS_TRUE,true,"Ambulation devices (eg, cane, crutches, walker)","Ambulation devices (eg, cane, crutches, walker)"
+log.M083.dplan.78,leaf_M083_03ddb2016c0b8b9a,IS_TRUE,true,Antiembolic or compression stockings,Antiembolic or compression stockings
+log.M083.dplan.79,leaf_M083_85183ec4f4ffbcaf,IS_TRUE,true,Bath and toilet aids,Bath and toilet aids
+log.M083.dplan.80,leaf_M083_67b5ea808f735c51,IS_TRUE,true,Blood pressure cuff,Blood pressure cuff
+log.M083.dplan.81,leaf_M083_578a9c997db7c9f2,IS_TRUE,true,Chair lift,Chair lift
+log.M083.dplan.82,leaf_M083_04e755082e8b1b0e,IS_TRUE,true,Lift equipment,Lift equipment
+log.M083.dplan.83,leaf_M083_459f38ba78f1d777,IS_TRUE,true,Pressure injury prevention equipment ( 64 ),Pressure injury prevention equipment ( 64 )
+log.M083.dplan.84,leaf_M083_8a2fcc8b285a1ce9,IS_TRUE,true,Wheelchairs and accessories,Wheelchairs and accessories
+log.M083.dplan.85,leaf_M083_4117b7808073b5a7,IS_TRUE,true,Other,Other
+log.M083.ddst.1,leaf_M083_6ab3f2b59902140f,IS_TRUE,true,Home.,Home.
+log.M083.ddst.2,leaf_M083_06d5381360664e5a,IS_TRUE,true,Home healthcare. See Home Care Indications for Admission Section HC in Stroke guideline in Home Care.,Home healthcare. See Home Care Indications for Admission Section HC in Stroke guideline in Home Care.
+log.M083.ddst.3,leaf_M083_e9d5040cac50ca39,IS_TRUE,true,Recovery facility care. See Recovery Facility Care Indications for Admission Section RFC in Stroke guideline in Recovery Facility Care.,Recovery facility care. See Recovery Facility Care Indications for Admission Section RFC in Stroke guideline in Recovery Facility Care.
+log.M083.ddst.4,leaf_M083_30860c5be5aa1869,IS_TRUE,true,Inpatient rehabilitation facility. See Inpatient Rehabilitation Facility (Acute Rehabilitation) Indications for Admission Section RFC in Inpatient Rehabilitation Facility (Acute Rehabilitation): Stroke guideline in Recovery Facility Care.,Inpatient rehabilitation facility. See Inpatient Rehabilitation Facility (Acute Rehabilitation) Indications for Admission Section RFC in Inpatient Rehabilitation Facility (Acute Rehabilitation): Stroke guideline in Recovery Facility Care.
